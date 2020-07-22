@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_1</title>
+
+    <style>
+        /* 1. Universal Selector */
+        *{
+            background-color: cadetblue;
+        }
+
+        /* 2.  */
+        p,h3{
+            background-color: cyan;
+        }
+
+        /* 3. Descendant Selector */
+        div h2{
+            color: red;
+        }
+
+        /* 4. Child Selector */
+        div > h2{
+            color: darkgreen;
+        }
+
+        /* 5. ID Selector */
+        #id_1{
+            color: darkmagenta;
+        }
+
+        /* 6. Class Selector */
+        .class_1{
+            background-color: darkviolet;
+        }
+
+        /* 7. Attribute Selector */
+        h2[class]{
+            color: white;
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <h1 id="id_1">Heading_1</h1>
+        <h2>Heading_2</h2>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ad vitae nulla! Eum, praesentium. Non deserunt nihil error repellendus animi impedit maiores, quo optio nam?</p>
+        </blockquote>
+    </div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad vero harum quod voluptatibus nisi quae provident, iure cumque eveniet alias autem, esse qui rerum at adipisci deserunt ab sunt illum excepturi optio aliquid ullam. Dolor quidem rem id quaerat quis explicabo sed fugiat eveniet optio facere! Dignissimos sed illo mollitia asperiores nihil sapiente ducimus ipsam provident, quisquam excepturi ea fugit voluptate architecto. Facilis doloribus perferendis maiores? Provident sed incidunt ut itaque est, laborum eius doloremque. Ad veniam, corrupti sunt voluptatum magnam iusto dolorem earum, ea minima aut asperiores repellat neque aspernatur excepturi. Impedit perspiciatis laudantium quaerat, autem facilis consectetur quibusdam.</p>
+    <h1>Heading_1</h1>
+
+    <div>
+        <blockquote>
+            <h1>Heading_1</h1>
+            <h2 class="class_1">Heading_2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis hic voluptatibus voluptates totam laboriosam voluptate corrupti ipsam molestiae tempora maxime nesciunt, eligendi corporis? Recusandae eos ratione dolorem adipisci hic nesciunt placeat, explicabo deserunt a maiores facilis eius asperiores repudiandae ad corrupti dolores alias dicta aut harum, cupiditate aliquid eveniet. Saepe?</p>
+        </blockquote>
+    </div>
+
+    <p class="class_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae laborum in ut illum assumenda alias perferendis repellat nihil facere nesciunt.</p>
+    <h3>Heading_3</h3>
+</body>
+</html>
+
+<!-- 
+    .class_a b -- tags under class "class_a" using b tag.class_1
+
+    h1.class_a -- only h1 headings under class "class_a"
+ -->
