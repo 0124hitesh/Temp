@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+</head>
+
+<Style>
+    @media ( min-width: 1200px) 
+    {
+    *{  margin: 0px; }
+
+    .a, .c, #x, #y, .b2{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .a, .c{
+        width: 98%;
+        background-color: lightblue;
+        height: 40px;
+        border-radius: 10px;
+        margin: 10px 1%;
+    }
+
+    .b1{
+        width: 30%;
+        border-radius: 10px;
+        height: 100%;
+        background-color: black; 
+        float: left;
+    }
+
+    #x{
+        width: 100%;
+        background-color: lavender;
+        height: 49%;
+        margin-bottom: 2%;
+        border-radius: 10px;
+    }
+
+    #y{
+        background-color: lightcoral;
+        width: 100%;
+        height: 49%;
+        margin: 0px;
+        border-radius: 10px;
+    } 
+
+    .b2{
+        background-color: lightseagreen;
+        margin-left: 2%;
+        width: 68%;
+        height: 400px;
+        border-radius: 10px;
+        float: right;
+    }
+    }
+    
+    @media (max-width: 1199px) and (min-width:900px)
+    {
+        *{  margin: 0px; }
+
+    .a, .c, #x, #y, .b2{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .a, .c{
+        width: 98%;
+        background-color: lightblue;
+        height: 40px;
+        border-radius: 10px;
+        margin: 10px 1%;
+    }
+    .c{ visibility: hidden;    }
+
+    .b1{
+        width: 30%;
+        border-radius: 10px;
+        height: 100%;
+        background-color: black; 
+        float: left;
+        display: flex;
+        flex-direction: column;
+        }
+
+    #x{
+        order: 2;
+        width: 100%;
+        background-color: lavender;
+        height: 49%;
+        border-radius: 10px;
+        display: flex;
+    }
+
+    #y{
+        order: 1;
+        background-color: lightcoral;
+        width: 100%;
+        height: 49%;
+        margin: 0px;
+        border-radius: 10px;
+        margin-bottom: 2%;
+        display: flex;
+    } 
+
+    .b2{
+        background-color: lightseagreen;
+        margin-left: 2%;
+        width: 68%;
+        height: 400px;
+        border-radius: 10px;
+        float: right;
+    }
+    }
+</Style>
+<body>
+    <div class="a">AAAaaaa</div>
+
+    <div class="b" style="width: 98%; margin: 1% auto; height: 400px;">
+        <div class="b1">
+            <div id="x">
+                bxxxx
+            </div>
+            <div id="y">
+                byyyy
+            </div>
+        </div>
+
+        <div class="b2">   b22222 </div>
+    </div>
+
+    <div class="c">   bccccc </div>
+    
+</body>
+</html>
