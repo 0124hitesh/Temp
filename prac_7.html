@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 7</title>
+</head>
+<style>
+    #a ,#b, #d1, #d21, #d22, #d23, #f{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #main{
+        border: 5px solid whitesmoke ;
+        width: 35%;
+        height: 100%;
+    }
+    #a, #f{
+        width: 98%;
+        height: 40px;
+        background-color: gray;
+        margin: 5px;
+    }
+    #b{
+        width: 98%;
+        height: 300px;
+        background-color:lightblue;
+        margin: 5px;
+    }
+    #c1, #c2, #c3, #c4{
+        width: 25%;
+        height: 100px;
+        border-radius: 50%;
+        background-color: darkgoldenrod;
+        float: left; 
+        margin-left: 4%;
+        margin-right: 4%;
+        flex-direction: row;
+    }
+    #d1{
+        width: 48.5%;
+        height: 200px;
+        background-color: lightslategray;
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    #d2{
+        width: 48.5%;
+        height: 200px;
+        float:right;
+        margin-right: 1%;
+    }
+    #d21, #d22, #d23{
+        background-color: rgba(165, 77, 42, 0.836);
+        width: 100%;
+        height: 32%;
+        margin: 0px;
+    }
+    #e1, #e2, #e3, #e4{
+        width: 22%;
+        height: 100%;
+        background-color: rgb(255, 102, 0);
+        float: left;
+        margin: 0px 5%;
+    }
+    }
+</style>
+<body>
+    <div id="main">
+        <div id="a">Header </div>
+        <div id="b">Banner</div>
+        <h4 style="text-align: center;">Section-1</h4>
+        <div id="c" style="width: 100% height: 100px; display: flex;">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+            <div id="c4"></div>
+        </div>
+        <h4 style="text-align: center;">Section-2</h4>
+        <div id="d" style="display: flex;">
+            <div id="d1">Main Content</div>
+            <div id="d2">
+                <div id="d21" style="margin-bottom: 2%;">Article-1</div>
+                <div id="d22" style="margin-bottom: 2%;">Article-2</div>
+                <div id="d23" style="margin-top: 2%;">Article-3</div>
+            </div>
+        </div>
+        <h4 style="text-align: center;">Section-3</h4>
+        <div id="e" style="display: flex; height: 105px; width: 100%;">
+            <div id="e1"></div>
+            <div id="e2"></div>
+            <div id="e3"></div>
+            <div id="e4"></div>
+        </div>
+        <h4 style="text-align: center;">Section-4</h4>
+        <div id="f" style="background-color: plum; margin-top: 0px;">Footer</div>
+    </div>
+</body>
+</html>
