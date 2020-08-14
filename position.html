@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<!-- 
+absolute -- fixed anywhere/ on top of container
+fixed -- fixed at particular position
+sticky -- fixed at fixed po 
+static -- no effect of helper position
+relative -- 
+-->
+<style>
+    body{
+        background-color: black;
+    }
+    #a, #b,#c{
+        height: 200px;
+        width: 400px;
+        margin: 20px;
+    }
+    #c{
+        position: fixed;
+        right: 0px;
+        top: 100px;
+    }
+    #b{
+        position: sticky;
+        top: 0px;
+    }
+    #con{
+        height: 500px;
+        width: 800px;
+        background-color: white;
+        margin: 20px auto;
+    }
+     #con{
+        /* position: relative; */
+        position: relative;
+        overflow: auto;
+    } 
+    #q, #w, #e{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        bottom: 0px;
+    }
+    /* ?????????????????? */
+    #imgg{
+        position: fixed;
+        left: 0px;
+    } 
+</style>
+<body>
+    <div id="a" style="background-color: aqua;"></div>
+    <div id="b" style="background-color: pink;"></div>
+    <div id="c" style="background-color: yellow;"></div>
+    
+    <span style="color: white; display: inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit sequi omnis? Impedit commodi ipsum unde, laboriosam exercitationem neque explicabo eos pariatur beatae. Qui assumenda itaque deserunt architecto illum. Vero commodi officia dolore assumenda in labore nisi eveniet error, dolorum dolor id modi nihil autem minus ad, corporis, sint amet unde. Minus rem id inventore itaque odio nemo, doloremque dolores delectus alias maxime non quisquam minima facilis vitae libero nesciunt repudiandae animi eos quis amet dolorem reiciendis? Earum rem sed pariatur eum dolore, labore quia soluta iusto tempora molestiae, exercitationem, vero eveniet porro vitae praesentium tempore ex! Sunt, culpa. Excepturi sed facilis deserunt, distinctio exercitationem obcaecati, odio eius corporis cumque error beatae et ipsa facere doloremque enim maiores? Adipisci nobis ea ex! Ipsum facilis eaque rem ratione laborum culpa numquam ipsam? Consequuntur quas magni quo error temporibus ducimus! Mollitia repellat repudiandae accusamus quae architecto sequi nobis fugiat dolorem, quaerat repellendus sunt maxime nam assumenda at consequuntur dolore eveniet quod minima odit magni sed voluptatum aliquam quisquam. Blanditiis ducimus inventore optio doloribus officia quibusdam obcaecati quo, sit enim nesciunt temporibus vitae maxime ullam itaque porro reiciendis accusantium iusto aut saepe nam recusandae? Est aperiam ipsa porro sequi ab corrupti animi quis!</span>
+    <img id="imgg" src="F:\Temp\img\bootstrap.jpg"  alt="">
+
+    <br>
+    <br>
+    <div id="con">
+        <div id="q" style="background-color: blue;"></div>
+        <div id="q" style="background-color: greenyellow; margin: 10px;"></div>
+        <div id="e" style="background-color: pink; margin: 20px;"></div>
+
+        <img src="F:\Temp\img\bootstrap.jpg" style="width: 500px;" alt="">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam neque consectetur aliquid sunt asperiores modi officiis odio a recusandae dignissimos quisquam dicta veniam blanditiis doloremque iure provident incidunt, fuga natus dolorem hic commodi magni ratione temporibus perspiciatis. Ab eum praesentium eos quas. Similique voluptatem dolorum ullam nisi hic ratione magni omnis voluptates doloremque? Itaque obcaecati odit modi rem autem cumque qui quo non culpa, soluta consequuntur saepe in aut ad odio ipsa perspiciatis iure? Non quidem consequuntur earum culpa, veniam provident ab quisquam consectetur repellendus tenetur ducimus est aperiam quaerat repellat, fugit et qui, inventore optio modi blanditiis hic reprehenderit. Velit aspernatur ipsa debitis ex explicabo adipisci pariatur suscipit officia eligendi reiciendis assumenda vero minus vel, porro odit cupiditate accusamus illum itaque error. Perferendis ducimus explicabo non magni voluptatem tempore eligendi! Laudantium esse vitae excepturi amet hic nostrum odio ut rem quo illo quia accusantium soluta quam corrupti libero sunt officiis, sit magnam similique, repellendus atque, repellat distinctio dolores. Consequuntur nesciunt dolor voluptatum qui obcaecati fugiat nostrum, id debitis laboriosam animi deserunt quidem eligendi suscipit temporibus doloremque eveniet nulla. Voluptates, magnam quibusdam veritatis deserunt nisi eligendi ex tempora quas necessitatibus deleniti voluptatibus unde rerum distinctio debitis aliquam nemo ullam! Expedita.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, autem. Illo perspiciatis vero, aperiam fugiat, cumque molestiae possimus veritatis eius incidunt ullam aut fuga exercitationem dolores tempore ducimus error natus saepe reiciendis reprehenderit esse dignissimos aspernatur. A ex odit, adipisci praesentium alias nemo officia qui repellendus similique minima? Voluptatem molestiae, impedit reprehenderit voluptate commodi optio exercitationem at nobis, eaque sit mollitia ipsam nesciunt perspiciatis veritatis veniam, excepturi quod. Vel doloribus tempora magni quos quisquam dolores minus impedit, suscipit qui veritatis!
+    </div>
+</body>
+</html>
