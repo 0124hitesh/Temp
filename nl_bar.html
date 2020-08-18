@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NL_BAR</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #bar{
+            background-color: grey;
+            display: inline-block;
+            width: 98%;
+            margin: 10px 1%;
+            text-align: center;
+        }
+        #main{
+            display: flex;
+            float: right;
+        }
+        #main li{
+            display: inline-block;
+            padding: 15px 15px;
+            position: relative;
+        }
+        #main a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 10px;
+            font-size: x-large;
+        }
+        #main a:hover{
+            background-color:red;
+            padding: 10px 10px;
+        }
+        #sbl1{
+            background-color: grey;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 150px;
+            display: none;
+        }
+        #sbl211, #sbl221{
+            background-color: grey;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 150px;
+            display: none;
+        }
+        #main li:hover #sbl1{   display: block; }
+        #main #sbl21:hover #sbl211{   display: block; }
+        #main #sbl22:hover #sbl221{   display: block; }
+    </style>
+    <div id="bar">
+        <h2 style="float: left; display: inline-block; padding: 15px 15px;">BARR</h2>
+        <ul id="main">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a>
+                <ul id="sbl1">
+                    <li id="sbl21"><a href="#">Front-end</a>
+                        <ul id="sbl211">
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                        </ul>
+                    </li>
+                    <li id="sbl22"><a href="#">Back-end</a>
+                        <ul id="sbl221">
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">AngularDB</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">lllll</a></li>
+        </ul>
+    </div>
+</body>
+</html>
