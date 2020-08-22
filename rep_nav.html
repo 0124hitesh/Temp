@@ -41,7 +41,7 @@
     .l1:hover, .l2:hover{  color: aqua;  transition: .5s; }
 
 
-    @media (min-width: 815px ){
+    @media (min-width: 825px ){
         #a li{
             display: inline-block;
             color: white;
@@ -53,7 +53,7 @@
 
     
 
-    @media (max-width: 815px)
+    @media (max-width: 825px)
     {
         .l2, #uol a{    color: white;   }
         #uol{   
@@ -61,10 +61,9 @@
             justify-content: center;
             text-align: center;
             background-color: black;
-            display: none;  
             position: fixed;
             top: 10px;
-            left: 2.5px;
+            right: -100%;
             }
         #uol li{
             color: white;
@@ -73,14 +72,13 @@
         .l1{    display: block; }
         .l2{
             position: absolute;
-            top: 10px;
+            top: 1px;
             right: 10px;
         }
-        #ch:checked ~ #uol{
-            display: block;
-            top: 10px;
-            right: 10px;
-        }
+        #ch:checked ~ #uol{     
+            right: 3px; 
+            transition: .5s;
+            }
     }
 </style>
 <body>
