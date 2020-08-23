@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>temp2</title>
+    <title>temp</title>
 </head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -31,16 +31,6 @@
         height: 800px;
         background-color:lightblue;
     }
-    #c1, #c2, #c3, #c4{
-        width: 25%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: darkgoldenrod;
-        float: left; 
-        margin-left: 3%;
-        margin-right: 3%;
-        flex-direction: row;
-    }
     #d1{
         width: 48.5%;
         height: 600px;
@@ -64,15 +54,6 @@
         height: 197px;
         margin: 0px;
     }
-    #e1, #e2, #e3, #e4{
-        width: 365px;
-        height: 100%;
-        background-color:lightgray;
-        float: left;
-        margin: 0px 3%;
-        position: relative; 
-        overflow: hidden;
-    }
     img{
         height: 100%;
         width: 100%;
@@ -81,13 +62,6 @@
         width: 100%;
         height: 40%;
         display: block;
-    }
-    #e{
-        display: flex; 
-        height: 28vw; 
-        width: 97vw; 
-        margin: auto;
-        flex-direction: row;
     }
     #e a{
         color: white;
@@ -136,8 +110,6 @@
     .l1{    float: right;   }
     #ch{    display: none; }
     .l1:hover, .l2:hover{  color: aqua;  transition: .5s; }
-
-
     @media (min-width: 830px ){
         #a li{
             display: inline-block;
@@ -147,11 +119,97 @@
         }
         .l1, .l2{   display: none;}
     }
-
     
-
-    @media (max-width: 830px)
-    {
+    #e{
+        display: flex; 
+        height: 28vw; 
+        width: 97vw; 
+        margin: auto;
+        flex-direction: row;
+    }
+    #c{
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+        height: 22vw;
+        align-items: center;
+    }
+    #c_1, #c_2{ 
+        height: 22vw; 
+        margin-bottom: 5vw;
+        width: 49%;
+    }
+    #e_21{
+        float: left;
+        display: flex;
+        flex-direction: row;
+        width: 48.5vw;
+    }
+    #e_22{
+        float: right;
+        display: flex;
+        flex-direction: row;
+        width: 48.5vw;
+    }
+    #c_1{
+        float: left;
+        display: flex;
+        flex-direction: row;
+    }
+    #c_2{
+        float: right;
+        display: flex;
+        flex-direction: row;
+    }
+    #c1, #c2, #c3, #c4{
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: darkgoldenrod;
+        float: left; 
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    #e1, #e2, #e3, #e4{
+        width: 50vw;
+        height: 100%;
+        background-color:lightgray;
+        margin: 0px 1vw;
+        position: relative; 
+        overflow: hidden;
+    }
+    @media (max-width: 1190px){
+        #e{ 
+            flex-direction: column;
+            height: 71vw;
+            align-items: center;
+        }
+        #e_21, #e_22{  
+            width: 80vw;
+            }
+        #c{
+            width: 100%;
+            flex-direction: column;
+            height: 58vw;
+            align-items: center;
+        }
+        #e_21, #e_21, #c_1, #c_2{
+            margin-bottom: 15px;
+        }
+        #c_1, #c_2{
+            height: 28.5vw;
+            width: 64vw;
+        }
+        #c1, #c2, #c3, #c4{
+            width: 100%;
+            margin-right: 15px;
+        }
+        #e1, #e2, #e3, #e4{
+            width: 50vw;
+            height: 35vw;
+        }
+    }
+    @media (max-width: 830px){
         .l2, #uol a{    color: white;   }
         #uol{   
             width: 100%;
@@ -176,8 +234,56 @@
         #ch:checked ~ #uol{     
             right: 3px; 
             transition: .5s;
+        }
+        #d{     
+            flex-direction: column;
             }
+        #d1{    
+            width: 100%;
+            margin: 0 0 10px 0; 
+            }
+        #d2{    
+            flex-direction: column;
+            width: 100%;
+        }
     }
+    @media (max-width: 650px){
+        #e{
+            height: 214vw;
+            width: 90vw;
+            flex-direction: column;
+            clear: both;
+        }
+        #e_21, #e_22{
+            width: 100%;
+            flex-direction: column;
+            clear: both;
+            margin-bottom: 0;
+        }
+        #e1, #e2, #e3, #e4{
+            width: 100%;
+            height: 53vw;
+            margin-bottom: 3vw;
+        }
+
+        #c{
+            width: 97vw;
+            flex-direction: column;
+            height: 234vw;
+        }
+        #c_1, #c_2{
+            flex-direction: column;
+            width: 75%;
+            height: 116vw;
+            margin-left: 7.5%;
+        }
+        #c1, #c2, #c3, #c4{
+            height: 57vw;
+            width: 80%;
+            margin-bottom: 2vw;
+        }
+    }
+    
 
    
 </style>
@@ -212,11 +318,16 @@
         <br><br><br>
 
 
-        <div id="c" style="width: 100%; height: 20vw; display: flex;">
-            <div id="c1"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team1.png?raw=true" alt="Member-1"></div>
-            <div id="c2"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team2.png?raw=true" alt="Member-2"></div>
-            <div id="c3"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team3.png?raw=true" alt="Member-3"></div>
-            <div id="c4"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team4.png?raw=true" alt="Member-4"></div>
+        <div id="c">
+            <div id="c_1">
+                <div id="c1"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team1.png?raw=true" alt="Member-1"></div>
+                <div id="c2"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team2.png?raw=true" alt="Member-2"></div>
+            </div>
+
+            <div id="c_2">
+                <div id="c3"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team3.png?raw=true" alt="Member-3"></div>
+                <div id="c4"><img style="border-radius: 50%;" src="https://github.com/0124hitesh/Temp/blob/master/img/team4.png?raw=true" alt="Member-4"></div>
+            </div>
         </div>
         <a name="about_us"></a>
         <br><br><br><br>
@@ -253,6 +364,7 @@
 
 
         <div id="e">
+            <div id="e_21">
                 <div id="e1">
                     <img src="https://github.com/0124hitesh/Temp/blob/master/img/html.png?raw=true" alt="HTML">
                     <h3 style="text-align: center;">Introduction to HTML</h3>
@@ -269,7 +381,9 @@
                     </p>
                     <a href="https://0124hitesh.github.io/Temp/p5_css">Read More</a>
                 </div>
-            
+            </div>
+
+            <div id="e_22">
                 <div id="e3">
                     <img src="https://github.com/0124hitesh/Temp/blob/master/img/js.png?raw=true" alt="JQuery">
                     <h3 style="text-align: center;">Introduction to JavaScript</h3>
@@ -286,6 +400,7 @@
                     </p>
                     <a href="https://0124hitesh.github.io/Temp/p5_boot">Read More</a>
                 </div>
+            </div>    
         </div>
         <a name="contact"></a>
         <br><br><br>
@@ -294,12 +409,12 @@
 
 
         <div id="f" style="background-color: plum; margin-top: 0px; text-align: center; font-size: large; height: 100px;">
-            <pre style="font-family: Arial, Helvetica, sans-serif;">
-
+            <!-- <pre style="font-family: Arial, Helvetica, sans-serif;"> -->
+                <br>
                 Website template for Practical-8 © <a href="https://www.beta-labs.in/">Beta-labs</a>
-
+                <br><br>
                 <a href="#top">Back to top</a>
-            </pre>
+            <!-- </pre> -->
         </div>
     </div>
 </body>
