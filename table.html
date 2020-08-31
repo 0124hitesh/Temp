@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+   table{
+        border-collapse: collapse;
+        width: 80%;
+        background-color: lightgrey;
+   }
+   th{
+       background-color: aqua;
+   }
+
+   tr:nth-child(odd){
+       background-color: white;
+   }
+
+   tfoot tr{
+       background-color: grey !important;
+   }
+    table caption{
+        caption-side: bottom;
+        color: red;
+    }
+    table, tr, th, td{
+        border: 2px solid;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <table align="center">
+        <caption>Table-1</caption>
+
+        <tr>
+            <th>abc</th>
+            <th>def</th>
+            <th>xyz</th>
+        </tr>
+
+        <tr>
+            <td>123</td>
+            <td style="width: 100px;">456</td>
+            <td>789</td>
+        </tr>
+
+        <tr>
+            <td>75552</td>
+            <td>5465</td>
+            <td>354315</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <table align="center">
+        <caption>Table-2</caption>
+
+        <!-- <colgroup span="2" style="background-color: bisque;"></colgroup> -->
+        <!-- change style column wise--> -->
+
+        <thead>
+            <tr>
+                <th>abc</th>
+                <th>def</th>
+                <th>xyz</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>123</td>
+                <td style="width: 100px;">456</td>
+                <td>xyyyzzz</td>
+            </tr>
+
+            <tr>
+                <td>kllo</td>
+                <td>hyuj</td>
+                <td>xyyyzzz</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">kllo
+                    <table align="center">
+                        <tr>
+                            <td>nested1</td>
+                            <td>nested1</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>hyuj</td>
+                <td>xyyyzzz</td>
+            </tr>
+
+            <tr>
+                <!-- <td>kllo</td> -->
+                <td>hyuj</td>
+                <td>xyyyzzz</td>
+            </tr>
+
+            <tr>
+                <td>kllo</td>
+                <td>hyuj</td>
+                <td>xyyyzzz</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <!-- <td>75552</td> -->
+                <td colspan="2">5465</td>
+                <td>xyyyzzz</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
