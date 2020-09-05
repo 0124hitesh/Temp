@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 12</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    body{
+        background-color: grey;
+    }
+
+    .tc{
+        background-color: white;
+        width: 800px;
+        min-width: 100px;
+        margin: 10px auto;
+    }
+
+    table, th, tr, td{  border-collapse: collapse;}
+
+    #t{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    tr{     text-align: center; }
+
+    thead th, tbody td, tfoot td{
+        padding: 10px;
+        font-size: 23px;
+    }
+
+    a{
+        display: block;
+        background-color: #64548f;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 8px;
+    }
+    a:hover{    background-color: red;}
+
+    i{
+        color: #64548f;
+    }
+    thead th{   
+        color: #64548f;
+        font-size: 33px;
+        padding: 20px;
+    }
+
+    .mo{
+        color: green;
+    }
+    .fa-times{
+        color: red;
+    }
+    .fa-check{
+        color: green;
+    }
+
+    .basic{     background-color: #d5e4bc ; }
+    .plus{      background-color: #c1dcb7 ; }
+    .del{       background-color: #bad6c8 ; }
+    .pro{       background-color: #bbd3dc ; }
+
+    tbody tr:nth-child(odd){  background-color: #dfebcf;}
+
+    .basic, .plus, .del, .pro{  
+        border: 6px solid white;
+       
+        width: 19%;
+        }
+</style>
+<body>
+    
+    <div class="tc">
+        <table id="#t" align="center">
+           <caption>
+                <h2 style="margin: 10px;"><b>SELECT YOUR PLAN</b></h2>
+           </caption>
+
+           <colgroup class="basic"></colgroup>
+           <colgroup class="plus"></colgroup>
+           <colgroup class="del"></colgroup>
+           <colgroup class="pro"></colgroup>
+            
+            <thead>
+                <tr>
+                    <th ><i class="fa fa-building"></i> Basic</th>
+                    <th ><i class="fa fa-superpowers"></i> Plus</th>
+                    <th ><i class="fa fa-telegram"></i> Deluxe</th>
+                    <th ><i class="fa fa-tachometer"></i> Pro</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="mo">Rs. 500/-</td>
+                    <td class="mo">Rs. 1500/-</td>
+                    <td class="mo">Rs. 2500/-</td>
+                    <td class="mo">Rs. 3500/-</td>
+                </tr>
+
+                <tr>
+                    <td>50 pages</td>
+                    <td>75 pages</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+
+                <tr>
+                    <td>3 users</td>
+                    <td>5 users</td>
+                    <td>10 users</td>
+                    <td>Unlimited</td>
+                </tr>
+
+                <tr>
+                    <td>10 sites</td>
+                    <td>25 sites</td>
+                    <td>100 sites</td>
+                    <td>Unlimited</td>
+                </tr>
+
+                <tr>
+                    <td>50 MB</td>
+                    <td>250 MB</td>
+                    <td>1 GB</td>
+                    <td>5 GB</td>
+                </tr>
+
+                <tr>
+                    <td>included</td>
+                    <td>included</td>
+                    <td>included</td>
+                    <td>included</td>
+                </tr>
+
+                <tr>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+
+                <tr>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+
+                <tr>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+
+                <tr>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+
+                <tr>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-times"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td><a href="">SIGN UP</a></td>
+                    <td><a href="">SIGN UP</a></td>
+                    <td><a href="">SIGN UP</a></td>
+                    <td><a href="">SIGN UP</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
