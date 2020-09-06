@@ -17,16 +17,20 @@
         margin: auto;
         margin-top: 10px;
         border: 2px solid black;
-        border-collapse: collapse;
-        border-radius: 10px; 
+
+        /* instead of border-collapse - border-spacing */
+        border-spacing: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     #t1{
-        height: 45px;
         background-color: #424a5a;
         color: white;
-        font-size:x-large;
         text-align: center;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+        padding: 11px;
     } 
    
     #t2 th{
@@ -77,9 +81,8 @@
 <body>
     <table>
         <thead>
-            <tr id="t1">
-                <td colspan="5" style="align-items: center;"><b> Fullstack Live Practical Book </b></td>
-            </tr>
+
+            <caption id="t1"><h2>Fullstack Live Practical Book</h2></caption>
 
             <tr id="t2">
                 <th>#</th>
