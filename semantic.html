@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+    }
+    nav{
+        background-color: lightgray;
+        width: 98%;
+        height: 60px;
+        margin: 10px auto;
+    }
+    ul{
+        float: right;
+        list-style: none;
+    }
+    ul li{
+        padding: 1vw;
+        display: inline-block;
+        font-size: 25px;
+
+    }
+    .a{
+        background-color: pink;
+        width: 98%;
+        height: 800px;
+        margin: 10px auto;
+    }
+    #b{ 
+        display: flex;
+        justify-content: space-evenly;
+        width: 98%;
+        margin: 40px auto;
+    }
+    .ci{
+        display: inline-block;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        background-color: aqua;
+    }
+    .c{
+        width: 98%;
+        height: 40vw;
+        margin: 20px auto;
+    }
+    article{
+        width: 49%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: rgb(186, 220, 250);
+        float: left;
+        overflow: hidden;
+    }
+    aside{
+        width: 49%;
+        height: 100%;
+        margin: 0 auto;
+        float: right;
+    }
+    .ca{
+        height: 32.3%;
+        width: 100%;
+        background-color: cadetblue;
+    }
+    .d{
+        display: flex;
+        width: 98%;
+        height: 33vw;
+        margin: 20px auto;
+        justify-content: space-evenly;
+    }
+    .d_a{
+        width: 24%;
+        height: 100%;
+        background-color: cornsilk;
+        border-radius: 4px;
+    }
+    footer{
+        width: 98%;
+        height: 6vw;
+        margin: 20px auto;
+        background-color: darkcyan;
+    }
+</style>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#"></a><b>Home</b></li>
+                    <li><a href="#"></a> About</li>
+                    <li><a href="#"></a>Services</li>
+                    <li><a href="#"></a>Contact</li>
+                    <li><a href="#"></a>Technology</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="a">
+
+        </section>
+
+        <section id="b">
+            <section class="ci"></section>
+            <section class="ci"></section>
+            <section class="ci"></section>
+            <section class="ci"></section>
+        </section>
+
+        <section class="c">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus repellendus dignissimos molestiae. Saepe distinctio soluta laudantium rem, modi at cum id accusamus beatae, voluptatum itaque doloribus consequatur perspiciatis, atque laborum! Ad esse voluptate adipisci assumenda aut est commodi, odio ipsam qui. Molestias tenetur earum eos nobis rerum, iure pariatur autem harum ex dolores doloremque, hic maxime nulla sapiente, cum aut beatae saepe quae eligendi. Repudiandae quidem saepe numquam officiis ex iusto? Ullam laboriosam ut incidunt molestiae optio beatae quis ducimus ea unde dolores harum veritatis, inventore dolorum dolore? Voluptas veritatis ab id ea culpa eligendi fuga. Quod, eaque ut.
+            </article>
+
+            <aside>
+                <article class="ca"></article>
+                <article class="ca" style="margin-top: 1%;"></article>
+                <article class="ca" style="margin-top: 1%;"></article>
+            </aside>
+        </section>
+
+        <section class="d">
+            <section class="d_a"></section>
+            <section class="d_a"></section>
+            <section class="d_a"></section>
+            <section class="d_a"></section>
+        </section>
+
+        <footer>
+            Website Template
+        </footer>
+    </main>
+</body>
+</html>
