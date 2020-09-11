@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Befor-After</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    section{
+        background-color: antiquewhite;
+        margin: 80px auto;
+        width: 80%;
+        text-align: center;
+        position: relative;
+
+        
+    }
+    h3, h2{
+        color: darkgoldenrod;
+        padding: 10px;
+        margin: 10px;
+        position: relative;
+        z-index: 2;
+    }
+    section::before{
+        content: '';
+        width: 50%;
+        background-color: aqua;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: .2;
+    }
+    section::after{
+        content: '';
+        width: 50%;
+        background-color:red;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .2;
+    }
+
+    h2::before{
+        content: '';
+        display: block;
+        width: 0;
+        background-color: blue;
+        height: 3px;
+        position: absolute;
+        top: -4px;
+        right: 0;
+    }
+    h2:hover::before{
+        transition:.4s;
+        width: 100%;
+    }
+</style>
+<body>
+    <section>
+        <h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, dolorum?
+        </h2>
+        <h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </h3>
+    </section>
+</body>
+</html>
