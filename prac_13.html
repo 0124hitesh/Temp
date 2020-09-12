@@ -22,6 +22,8 @@
     hr{     opacity: .2;      }
     footer{
         background-color: #26272b;
+        width: 98%;
+        margin: 0 1%;
     }
 
     .sec1{
@@ -29,10 +31,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 20px 10px;
+        margin-bottom: 20px;
     }
     .sec1 h2{
         margin-bottom: 10px;
     }
+    .sec1 p{    font-size: 18px;    }
     .ab{
         width: 40%;
         text-align: justify;
@@ -41,10 +45,11 @@
     li{
         list-style-type: none;
         padding: 3px;
+        font-size: 18px;
     } 
     .cat li:hover, .ql li:hover{
         color: orange;
-        font-size: 18px;
+        font-size: 20px;
     }
     .contact i{
         margin-right: 10px;
@@ -58,7 +63,6 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
-        margin-top: 30px;
     }
     .sec2 p{ font-size: 23px;}
     .sec2 a{
@@ -105,7 +109,10 @@
         background-color: black;
         padding: 20px;
     }
-    .sec4 p{    position: relative;}
+    .sec4 p{    
+        position: relative;
+        font-size: 17px;
+        }
     .sec4 p::after{
         content: '';
         display: block;
@@ -121,19 +128,19 @@
         width: 100%;
     }
 
-    @media (max-width:1030px){
+    @media (max-width:1050px){
         .sec1 .ab{
             width: 100%;
             margin-bottom: 20px;
         }
     }
-    @media (max-width:615px){
+    @media (max-width:630px){
          .sec1 .cat, .sec1 .ql, .sec1 .contact{
             width: 100%;
             margin-bottom: 20px;
         }
     }
-    @media (max-width:566px){
+    @media (max-width:577px){
         .sec3 {
             padding: 15px 0;
         }
@@ -144,10 +151,23 @@
             width: 55px;
             margin: 1vw;
         }
+        .sec4 p{    font-size: 16px;}
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main h1{
+        font-size: 6vw;
+        margin-bottom: 3vw;
     }
 </style>
 
 <body>
+    <main>
+        <h1><span style="color: blue;">Responsive</span> <span style="color: deeppink;">Footer</span></h1>
+    </main>
     <footer>
         <section class="sec1">
             <section class="ab">
@@ -192,6 +212,7 @@
             </section>
         </section>
 
+        <hr noshade="">
         <section class="sec2">
             <p>Register for Free</p>
             <a href="#">SIGN UP!</a>
@@ -210,7 +231,7 @@
         </section>
 
         <section class="sec4">
-            <p style="font-size:17px">Copyright Ⓒ 2020 All rights Reserved by <b>0124hitesh</b></p>
+            <p>Copyright Ⓒ 2020 All rights Reserved by <b>0124hitesh</b></p>
         </section>
     </footer>
 </body>
