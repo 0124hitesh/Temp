@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+        color: gray;
+    }
+    ::selection{
+        color: white;
+        background-color: grey;
+    }
+    h2{     color: white;   }
+    hr{     opacity: .2;      }
+    footer{
+        background-color: #26272b;
+    }
+
+    .sec1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 10px;
+    }
+    .sec1 h2{
+        margin-bottom: 10px;
+    }
+    .ab{
+        width: 40%;
+        text-align: justify;
+        /* line-height: 23px; */
+    }
+    li{
+        list-style-type: none;
+        padding: 3px;
+    } 
+    .cat li:hover, .ql li:hover{
+        color: orange;
+        font-size: 18px;
+    }
+    .contact i{
+        margin-right: 10px;
+    }
+    .contact a{
+        text-decoration: none;
+    }
+
+    .sec2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    .sec2 p{ font-size: 23px;}
+    .sec2 a{
+        display: block;
+        background-color: red;
+        border-radius: 15px;
+        padding: 5px 9px;
+        margin-left: 17px;
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+    }
+    .sec2 a:hover{  background-color: blue;}
+    .sec3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 10px;
+    }
+    .sec3 li{
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        background-color: rgba(255,255,255,.2);
+        border-radius: 50%;
+        font-size: 30px;
+        margin: 10px 20px;
+    }
+    .sec3 i{
+        margin: 14px 17px;
+    }
+    .sec3 li:hover:nth-child(1){ background-color: #3b5999;}
+    .sec3 li:hover:nth-child(2){ background-color: #55acee;}
+    .sec3 li:hover:nth-child(3){ background-color: #dd4b39;}
+    .sec3 li:hover:nth-child(4){ background-color: #0077B5;}
+    .sec3 li:hover:nth-child(5){ background-color: #ea4c89;}
+
+    
+
+    .sec4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 20px;
+    }
+    .sec4 p{    position: relative;}
+    .sec4 p::after{
+        content: '';
+        display: block;
+        width: 0;
+        background-color: yellow;
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        transition: .3s;
+    }
+    .sec4 p:hover::after{
+        width: 100%;
+    }
+
+    @media (max-width:1030px){
+        .sec1 .ab{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width:615px){
+         .sec1 .cat, .sec1 .ql, .sec1 .contact{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width:566px){
+        .sec3 {
+            padding: 15px 0;
+        }
+        .sec3 li{
+            font-size: 27px;
+            padding: 5px;
+            height: 55px;
+            width: 55px;
+            margin: 1vw;
+        }
+    }
+</style>
+
+<body>
+    <footer>
+        <section class="sec1">
+            <section class="ab">
+                <h2>ABOUT</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto sunt sint libero esse officiis error assumenda, tempora quam odio dolorem quae eum sed inventore aliquid ex numquam voluptatum cum voluptatem vero quo consequuntur a aliquam. Obcaecati molestiae et perferendis nisi! Cumque ad repellat eius cupiditate voluptate blanditiis, numquam nihil molestiae sequi pariatur temporibus ipsum minus possimus consequuntur iusto deleniti, voluptatum, magni in commodi quidem incidunt. Optio quas harum consectetur nemo autem. Et eaque harum laboriosam obcaecati mollitia unde assumenda blanditiis?
+                </p>
+            </section>
+
+            <section class="cat">
+                <h2>CATEGORIES</h2>
+                <ul>
+                    <li><a href="#"></a>C</li>
+                    <li><a href="#"></a>UI Design</li>
+                    <li><a href="#"></a>PHP</li>
+                    <li><a href="#"></a>Java</li>
+                    <li><a href="#"></a>Anroid</li>
+                    <li><a href="#"></a>Templates</li>
+                </ul>
+            </section>
+
+            <section class="ql">
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li><a href="#"></a>About Us</li>
+                    <li><a href="#"></a>Contact Us</li>
+                    <li><a href="#"></a>Contribute</li>
+                    <li><a href="#"></a>Java</li>
+                    <li><a href="#"></a>Privacy Policy</li>
+                    <li><a href="#"></a>Sitemap</li>
+                </ul>
+            </section>
+
+            <section class="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li><i class="fa fa-home"></i>Sec-11, Palwal, India</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:hitesh.sharma_cs18@gla.ac.in">hitesh.sharma_cs18@gla.ac.in</a></li>
+                    <li><i class="fa fa-phone"></i><a href="tel:9368532908">Mobile: 9368532908</a></li>
+                    <li><i class="fa fa-facebook-square"></i>betalabsindia</li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="sec2">
+            <p>Register for Free</p>
+            <a href="#">SIGN UP!</a>
+        </section>
+
+        <hr noshade="">
+
+        <section class="sec3">
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google"></i></li>
+                <li><i class="fa fa-linkedin"></i></li>
+                <li><i class="fa fa-dribbble"></i></li>
+            </ul>       
+        </section>
+
+        <section class="sec4">
+            <p style="font-size:17px">Copyright Ⓒ 2020 All rights Reserved by <b>0124hitesh</b></p>
+        </section>
+    </footer>
+</body>
+</html>
