@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- method=POST/GET -->
+    <form action="F:\Temp\index.html" target="_blank" method="POST" name="formm" novalidate>
+
+        <!-- required - compulsary to provide value
+        readonly- can't give value
+                can't use both simuntaneously -->
+
+        <label for="">Input_1</label>
+        <input type="text" required>
+        <br><br>
+
+        <label for="i1">Input_2</label>
+        <input type="text" name="i1" value="input2" readonly>
+        <br><br>
+
+        <label for="">Input_3
+            <input type="text">
+        </label>
+        <br><br>
+
+        <label for="">input_4_pass</label>
+        <input type="password" name="" id="">
+
+        <br><br>
+        <input type="submit" value="submittt">
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>
