@@ -6,17 +6,15 @@
     <title>Form1</title>
 </head>
 <body>
-    <div id="data">
-        <a href="F:\Temp\form.html">Back</a>
-    </div>
+    <div id="data"></div>
+    `<a href="F:\Temp\form.html">Back</a>
 
     <script>
         const mydata=document.getElementById('data');
-        new URLSearchParams(window.location.search).forEach(value,name)
-        {
-            mydata.append('${name} : ${value}');
-            mydata.appen((document.createElement('br')));
-        }
+        new URLSearchParams(window.location.search).forEach((value,name) => {
+            mydata.append(`${name}: ${value}`);
+            mydata.append(document.createElement('br'));
+        });
     </script>
 </body>
 </html>
