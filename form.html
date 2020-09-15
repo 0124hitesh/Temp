@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
+<style>
+    input[type=text]{
+        background-color: aqua;
+    }
+</style>
 <body>
     <!-- method=POST/GET -->
-    <form action="F:\Temp\index.html" target="_blank" method="GET" name="formm" novalidate>
+    <!-- novalidate -- discard required and readonly -->
+    <!-- default method="GET" -->
+    <form action="F:\Temp\form1.html" target="_blank" method="GET" name="formm" novalidate>
 
         <!-- required - compulsary to provide value
-        readonly- can't give value
-                can't use both simuntaneously -->
+             readonly- can't give value
+             can't use both simuntaneously -->
 
         <label for="">Input_1</label>
-        <input type="text" required>
+        <input type="text" required name="i1">
         <br><br>
 
         <label for="i2">Input_2</label>
-        <input type="text" id="i2" value="input2" readonly>
+        <input type="text" id="i2" name="i2" value="input2" readonly>
         <br><br>
 
         <label for="">Input_3
-            <input type="text" placeholder="enter inputt i3">
+            <input type="text" placeholder="enter inputt i3" name="i3">
         </label>
         <br><br>
 
         <label for="">input_4_pass</label>
-        <input type="password" name="" id="">
+        <input type="password" name="i4" id="">
 
         <br><br>
         <input type="submit" value="submittt">
