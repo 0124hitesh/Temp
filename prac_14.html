@@ -18,17 +18,31 @@
 
     main{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         margin-top: 20px;
+        flex-wrap: wrap;
     }
-
-    .a{
+    input[type="text"], input[type="password"]{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        border: none;
+        border-bottom: 1.5px solid rgb(169,169,169,.4);
+        padding: 13px 3px;
+        font-family: Arial, Helvetica, sans-serif;     
+        font-size: medium;   
+    }
+    input[type="text"]:focus, input[type="password"]:focus{
+        outline-style: none;
+    }
+    .a, .b, .c{
         width: 350px;
         height: 475px;
         background-color: white;
         border-radius: 5px;
         position: relative;
+        margin-bottom: 25px;
     }
     .aa{
         height: 30%;
@@ -48,19 +62,6 @@
         margin: 28px 20px;
         font-size: 28px;
         color: white;
-    }
-    input[type="text"], input[type="password"]{
-        display: block;
-        margin: 0 auto;
-        width: 80%;
-        border: none;
-        border-bottom: 1.5px solid rgb(169,169,169,.4);
-        padding: 13px 3px;
-        font-family: Arial, Helvetica, sans-serif;     
-        font-size: medium;   
-    }
-    input[type="text"]:focus, input[type="password"]:focus{
-        outline-style: none;
     }
     .a #fp{
         font-family: Arial, Helvetica, sans-serif;
@@ -88,6 +89,107 @@
         color: black;
         font-size: 13px;
     }
+
+    .b h2, .c h2{
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;  
+        color: deeppink;      
+        font-size: 40px;
+    }    
+    .b #art1{
+        width: 80%;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+    .b #art1 a{
+        color: rgb(42, 185, 233);
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .b #signup{
+        display: block;
+        float: left;
+        text-decoration: none;
+        padding: 8px 13px;
+        background-color: deeppink;
+        margin-left: 10%;
+        border-radius: 18px;
+        color: white;
+        font-weight: 500;
+        margin-right: 15px;
+        box-shadow: 0 2px rgba(0,0,0,.2);
+    }
+    .b p{
+        padding: 8px;
+        font-size: 15px;
+    }
+    .b a{
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(70, 181, 218);
+    }
+    .b #art2{
+        position: absolute;
+        bottom: 0;
+        height: 20%;
+        width: 100%;
+        background-color: lightsteelblue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .b #art2 a{
+        font-size: 25px;
+        color: white;
+    }
+
+    .c #art1{
+        width: 80%;
+        margin:auto;
+        clear: both;
+    }
+    .c #art1 a{
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(42, 185, 233);
+        float: right;
+    }
+    .c #signin{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background: linear-gradient(to right, rgb(163, 224, 245) 0%, rgb(83, 83, 224) 100%);
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 2px rgba(0,0,0,.2);
+    }
+    .c #art2{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .c #art2 i{
+        display: inline-block;
+        margin: 10px 20px;
+        padding: 5px 10px;
+        font-size: 20px;
+        color: rgb(20, 139, 212);
+        border: 1px solid rgb(242,237,255);
+        border-top: none;
+        border-radius: 15px;
+        box-shadow: 0 2px rgba(0,0,0,.1);
+        width: 50px;
+    }
 </style>
 
 <body>
@@ -95,9 +197,9 @@
         <section class="a">
             <section class="aa">
                 <h2>Log in</h2>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-google-plus"></i>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
             </section>
             <br><br>
             <input type="text" placeholder="Your email" id="yname" style="margin-bottom: 22px;">
@@ -105,8 +207,51 @@
             <a href="#" id="fp">Forgot <b>Password?</b></a>
             <br><br><br><br><br>
             <a href="#" id="login">LOG IN</a>
-            <p>Don't have an account?<a href=""> <b>Sign Up</b></a></p>
-            
+            <p>Don't have an account?<a href=""> <b>Sign Up</b></a></p>    
+        </section>
+
+        <section class="b">
+            <h2>Sign up</h2>
+            <br><br><br>
+            <input type="text" placeholder="Your email" style="margin-bottom: 22px;">
+            <input type="password" placeholder="Your password">
+            <br>
+
+            <article id="art1">
+                <input type="checkbox" name="" id="">&nbsp &nbsp Accept the <a href="">Terms and Conditions</a>
+            </article>
+
+            <br><br><br>
+            <a href="#" id="signup">Sign up</a>
+            <p>Have an account? <a href="#">Log in</a></p>
+
+            <article id="art2">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </article>
+        </section>
+
+        <section class="c">
+            <h2 style="color: black;">Sign in</h2>
+            <br><br><br>
+            <input type="text" placeholder="Your email" style="margin-bottom: 22px;">
+            <input type="password" placeholder="Your password">
+            <br>
+            <article id="art1">
+                <a href="#">Forgot Password?</a>
+            </article>
+            <br><br><br>
+
+            <a href="#" id="signin">Sign in</a>
+
+            <article id="art2">
+                <p>or Sign in with:</p>
+                <br>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </article>
         </section>
     </main>
 </body>
