@@ -26,7 +26,7 @@
     input[type="text"], input[type="password"]{
         display: block;
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
         border: none;
         border-bottom: 1.5px solid rgb(169,169,169,.4);
         padding: 13px 3px;
@@ -80,6 +80,7 @@
         border-radius: 20px;
         color: white;
         margin-right: 20px;
+        box-shadow: 0 2px rgba(0, 0, 0, .2);
     }
     .a p{
         font-size: 13px;
@@ -199,6 +200,24 @@
         font-weight: 600;
         margin: 20px 0 50px 0;
     }
+    .ph{
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .sp{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    input:focus + .sp, input:not(:placeholder-shown) + .sp {
+        transform:  translateY(-92%) translateX(2px);
+        font-size: 12px;
+        font-weight: 600;
+        color: blue;
+        margin-top: 5px;
+        transition: .4s;
+    }
 </style>
 
 <body>
@@ -214,8 +233,15 @@
                 <a href="#"><i class="fa fa-google-plus"></i></a>
             </section>
             <br><br>
-            <input type="text" placeholder="Your email" id="yname" style="margin-bottom: 22px;">
-            <input type="password" placeholder="Your password" style="margin-bottom: 10px;">
+            <article class="ph">
+                <input type="text" placeholder=" " id="yname">
+                <span class="sp">Your email</span>
+            </article>
+                <br>
+            <article class="ph" style="margin-bottom: 5px;">
+                <input type="password" placeholder=" ">
+                <span class="sp">Your password</span>
+            </article>
             <a href="#" id="fp">Forgot <b>Password?</b></a>
             <br><br><br><br><br>
             <a href="#" id="login">LOG IN</a>
@@ -225,8 +251,15 @@
         <section class="b">
             <h2>Sign up</h2>
             <br><br><br>
-            <input type="text" placeholder="Your email" style="margin-bottom: 22px;">
-            <input type="password" placeholder="Your password">
+            <article class="ph">
+                <input type="text" placeholder=" " id="yname">
+                <span class="sp">Your email</span>
+            </article>
+                <br>
+            <article class="ph">
+                <input type="password" placeholder=" ">
+                <span class="sp">Your password</span>
+            </article>
             <br>
 
             <article id="art1">
@@ -247,8 +280,15 @@
         <section class="c">
             <h2 style="color: black;">Sign in</h2>
             <br><br><br>
-            <input type="text" placeholder="Your email" style="margin-bottom: 22px;">
-            <input type="password" placeholder="Your password">
+            <article class="ph">
+                <input type="text" placeholder=" " id="yname">
+                <span class="sp">Your email</span>
+            </article>
+                <br>
+            <article class="ph">
+                <input type="password" placeholder=" ">
+                <span class="sp">Your password</span>
+            </article>
             <br>
             <article id="art1">
                 <a href="#">Forgot Password?</a>
