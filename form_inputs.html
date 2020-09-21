@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Inputs</title>
+</head>
+<body>
+    <form action="">
+        <!-- disabled -- not submit value to server -->
+        <!-- hidden -- text box is not visible but submitted to server -->
+        <!-- value -- set default value -->
+        <label for="">Username</label>
+        <input type="text" name="Username" id="username" value="shibb" pattern="[A-Z][A-Z a-z 0-9]{3,}"
+         title="username must contain 4 character">
+        <br><br>
+
+        <label for="pass">Password</label>
+        <!-- size -- set character size// by defult it's 20 -->
+        <input type="password" name="Password" id="pass" size="20">
+        <br><br>
+        <input type="checkbox" name="chk" id="" onclick="sp()">Show password
+        <br><br>
+
+        <label for="rad">Radio_Demo</label>
+        <input type="radio" name="Radio" id="rad">Abc
+        <input type="radio" name="Radio" id="rad">Def
+        <input type="radio" name="Radio" id="rad">Xyz
+        <br><br>
+
+        <label for="chk">Checkbox_Exam</label>
+        <input type="checkbox" name="Chk_A" id="chk">A
+        <input type="checkbox" name="Chk_B" id="chk">B
+        <input type="checkbox" name="Chk_C" id="chk">C
+        <br><br>
+
+        <label for="num">Number_input</label>
+        <!-- step -- increase by 5 -->
+        <input type="number" name="Number_input" id="num" min="10" max="100" step="5">
+        <br><br>
+
+        <label for="date">Date</label>
+        <input type="date" name="Date" id="date">
+        <br><br>
+
+        <label for="month">Month</label>
+        <input type="month" name="Month" id="month">
+        <br><br>
+
+        <label for="week">Week</label>
+        <input type="week" name="Week" id="week">
+        <br><br>
+
+        <label for="time">Time</label>
+        <input type="time" name="Time" id="time">
+        <br><br>
+
+        <label for="m_t">Date_time</label>
+        <input type="datetime-local" name="date_time" id="m_t">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email">
+        <br><br>
+
+        <label for="mul">Multimedia/File</label>
+        <input type="file" name="Mul" id="mul" accept=".pdf, .docx">
+        <br><br>
+
+        <label for="search">Search</label>
+        <input type="search" name="Search" id="search">
+        <br><br>
+
+        <label for="url">URL</label>
+        <input type="url" name="URL" id="urlll">
+        <br><br>
+
+        <label for="range">Range_Exam</label>
+        <!-- default value -- 50 -->
+        <input type="range" name="Rangee" id="range" value="100">
+        <br><br>
+
+        <input type="button" value="Button" onclick="alert('this isbutotn')">
+        <br><br>
+
+        <input type="image" src="https://images.wallpapersden.com/image/download/kid-goku_64432_1920x1080.jpg" alt="Photo"
+        width="80px" height="60px"
+        >
+        <br><br>
+        
+        <label for="sbt"></label>
+        <input type="submit" name="Submit" id="sbt">
+    </form>
+
+
+    <script>
+        function sp(){
+            var x = document.getElementById("pass");
+            if(x.type == "password"){
+                x.type="text";
+            }
+            else{
+                x.type="password"
+            }
+        }
+    </script>
+</body>
+</html>
