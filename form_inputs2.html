@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Inputs</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Details_1</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" id="age">
+        <br><br>        
+    </fieldset>
+
+    <fieldset>
+        <legend>Details_2</legend>
+
+        <p>About Student:</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br><br>
+
+        <!-- multiple -- to select multiple -->
+        <select name="Options" id="" multiple>
+            <option value="A" selected>A lorem</option>
+            <option value="B">B lorem</option>
+            <option value="C">C lorem</option>
+            <option value="D">D lorem</option>
+        </select>
+        <br><br>
+
+        <select name="Options" id="">
+            <optgroup label="Abc">
+                <option value="A" selected>A lorem</option>
+                <option value="B">B lorem</option>
+            </optgroup>
+            <optgroup label="Xyz">
+                <option value="X">C lorem</option>
+                <option value="Y">D lorem</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <select name="Options" id="" size="3">
+            <option value="A">A lorem</option>
+            <option value="B">B lorem</option>
+            <option value="C">C lorem</option>
+            <option value="D">D lorem</option>
+            <option value="D">D lorem</option>
+        </select>
+        <br><br>
+
+        <label for="dl">DataList</label>
+        <input type="text" list="dl">
+        <datalist id="dl">
+            <option value="Abc"></option>
+            <option value="Xyz"></option>
+            <option value="Pqr"></option>
+        </datalist>
+        <br><br>
+
+        <button type="button">
+            <!-- can insert any tag img,href -->
+            <!-- default behaviour as submit -->
+            click here
+        </button>
+        
+    </fieldset>
+</body>
+</html>
