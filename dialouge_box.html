@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialouge Boxes</title>
+</head>
+<body>
+    <button id="btn" onclick="boxx()">Button</button>
+    <button onclick="alert('heyyy')">Button_2</button>
+
+    <script>
+        function boxx(){
+            //alert box
+            //alert("this is pop-up");
+
+            //confirm box
+            //return true/false boolean value
+           // var a=confirm("are u confirm");
+
+            //promt box
+            var x=Number(prompt("input x"));
+            var y=parseInt(prompt("input y"));
+            if(x+y > 10)
+                alert(x+y);
+            else
+                alert("less than 10");
+        }
+    </script>
+
+    <!-- works only when javascript is disabled in browser -->
+    <noscript>
+        Enable javascript in your browser.
+    </noscript>
+</body>
+</html>
