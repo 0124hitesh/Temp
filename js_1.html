@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_1</title>
+</head>
+<body>
+    <!-- Inline function Call -->
+    <button onclick="a()" >Clickk</button>
+
+    <button id="btn" >Cilck_2</button>
+    <script>
+        function a(){
+            alert("alertt");
+        }
+
+        var b=document.getElementById("btn");
+        b.onclick=function(){
+            alert("alert_2");
+        };
+    </script>
+</body>
+</html>

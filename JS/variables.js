@@ -11,7 +11,7 @@ function fuc()
     d=30; // globally
     let e=40; // blockscope
     var f=50;
-    // window.g=60;  //can be access in browser 
+    // window.g=60;  //can be access in browser // make variabke global
 }
 
 console.log(a)
