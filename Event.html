@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        #sec{
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        #btn_1, #btn_2, #btn_3{
+            display: block;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="sec"></section>
+    
+    <!-- Inline Event Binding -->
+    <button id="btn_1" onclick="col()"> Buttonnnnn </button>
+    <button id="btn_2">Buttonnn_2</button>
+    <button id="btn_3">Buttonnn_3</button>
+
+    <script>
+        function col(){
+            document.getElementById("sec").style.backgroundColor="blue";
+        }
+
+        // Binding Event DOM Level-1
+        var a=document.getElementById("btn_2");
+        a.onclick=col_1;
+        a.onclick=col_2;
+
+        function col_1(){
+            document.getElementById("sec").style.border="5px solid black";
+        }
+
+        function col_2(){
+            document.getElementById("sec").style.backgroundColor="red";
+        }
+
+        // Binding Event DOM Level-2
+        var b=document.getElementById("btn_3");
+        b.addEventListener("click",col_1);
+        b.addEventListener("click",col_2);
+        b.addEventListener("click",function(){document.getElementById("sec").style.width="500px"});
+
+        // can't remove anonymous function using removeEventListner
+        // b.removeEventListener("click",col_1);
+    </script>
+</body>
+</html>
