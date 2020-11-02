@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="di">
+        first TRxttttttttt
+        <p>This is para-1</p>
+        <h1>Heading 1</h1>
+        <ul>
+            <li>Abc</li>
+            <li>Xyz</li>
+            <li>Pqr</li>
+        </ul>
+        <p>this is para-2</p>
+        Second Texttt
+    </div>
+
+    <script>
+        var x=document.querySelectorAll('p');
+        console.log(x);
+        console.log(x[0]);
+        console.log(x[1]);
+
+        x[0].setAttribute("id","para_1");
+        x[0].setAttribute('class','para');
+
+        x[1].setAttribute('id','para2');
+        x[1].setAttribute('class','para');
+
+        x[1].removeAttribute('id','para2');
+        x[1].removeAttribute('class','para');
+
+        x[1].classList.add("para");
+        //x[1].classList.remove("para");
+
+
+        var y=document.getElementById('di');
+        console.log(y.childNodes);
+        console.log(y.childNodes[0].parentElement);
+    </script>
+</body>
+</html>

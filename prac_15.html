@@ -79,3 +79,78 @@ x        }
     </script>
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15</title>
+    <style>
+        * {
+            font-size: 41px;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 4vw;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+
+        #plus,
+        #minus {
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+            border-color: gray black black tgray;
+            box-shadow: 2px 2px black;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <h1>COUNTER</h1>
+    <div id="container">
+        <button id="minus" disabled>-</button>
+        <div style="height: 50px; width: 300px; background-color: gray; margin: auto 10px; ">
+            <span id="field" style="text-align: center; display: block; font-size: 50px; color: yellow;"></span>
+        </div>
+        <button id="plus">+</button>
+
+    </div>
+    <script>
+        var p = document.getElementById('plus');
+        var field = document.getElementById('field');
+        var m = document.getElementById('minus');
+        var num = 0;
+        field.innerText = String(num);
+        p.addEventListener('click', () => {
+            num = num + 1;
+            field.innerText = String(num);
+            m.disabled = false;
+        })
+        m.addEventListener('click', () => {
+            num = num - 1;
+            field.innerText = String(num);
+            if (num <= 0) {
+                m.disabled = true;
+            }
+        })
+    </script>
+</body>
+
+</html> -->

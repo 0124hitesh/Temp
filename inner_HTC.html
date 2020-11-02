@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML,TEXT,CONTENT</title>
+</head>
+<body>
+    <p>this is aaaa <b>para</b> andd para1    paraaaaaa
+    second line
+    </p>
+
+    <script>
+        var x=document.querySelector('p');
+        console.log(x);
+        console.log(x.innerHTML);
+        console.log(x.innerText);
+        console.log(x.textContent);
+
+        x.innerHTML='this is <b>Paraaaa</b>.'
+    </script>
+</body>
+</html>
