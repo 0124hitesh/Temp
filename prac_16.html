@@ -40,7 +40,7 @@
             outline: none;
             background-color: white;
         }
-        #add:hover,.td{
+        #add:hover{
             background-color:aquamarine;
         }
 
@@ -73,7 +73,7 @@
             padding: 5px;
             width: 40px;
         }
-        #tick{  background-color: rgb(118, 248, 118); }
+        #tick{  background-color: rgb(55, 187, 55); }
         #tick:hover{    background-color: rgba(32, 173, 32, 0.5); }
         #dlt{   background-color: rgb(216, 112, 147); }
         #dlt:hover{ background-color:  rgb(216, 112, 147,.5)}
@@ -103,7 +103,7 @@
         function items(){
            
             if(inp.value.length > 0){
-                window.a=document.createElement('li');
+                var a=document.createElement('li');
                 a.classList.add("li_items");
                 todo.appendChild(a);
                 a.innerHTML='<span class="sp">'+inp.value +'</span>'+ 
@@ -115,14 +115,12 @@
             }
         }
         document.addEventListener('click',function(e){
-            if(e.target.className == 'td'){
-                a.classList.toggle('line');
+            if(e.target && e.target.id == 'tick'){
+                e.target.parentNode.classList.toggle('line');
             }
-        });
-
-        document.addEventListener('click',function(e){
+        
             if(e.target.id == 'dlt'){
-                a.remove();
+                e.target.parentNode.remove();
             }
         });
         

@@ -38,17 +38,25 @@
     </style>
 </head>
 <body>
-    <section>
-        <ul>
+    <section id="sec">
+        <ul id="ull">
             <!-- <div><li><span>jhjhjjjjjjjjjjh</span><i class="fa fa-check"></i></li></div>
             <div><li><span>jhjh3t4jh</span><i class="fa fa-check"></i></li></div>
             <div><li><span>jdddddddhjhjh</span><i class="fa fa-check"></i></li></div>  -->
 
-             <li>aaaaaaaaaa<i class="fa fa-check"></i></li>
-            <li>aaaaa<i class="fa fa-check"></i></li>
-            <li>aaaaaaadddahhhhaa<i class="fa fa-check"></i></li> 
+             <li class="lii">aaaaaaaaaa<i class="fa fa-check"></i></li>
+            <li class="lii">aaaaa<i class="fa fa-check"></i></li>
+            <li class="lii">aaaaaaadddahhhhaa<i class="fa fa-check"></i></li> 
             
         </ul>
     </section>
+    <script>
+        var a=document.getElementById('sec');
+        console.log(a.childNodes.nodeName);
+        console.log(a.childNodes[0]);
+
+        var b=document.querySelector('ul');
+        conosle.log(b.parentElement.nodeName);
+    </script>
 </body>
 </html>
