@@ -113,12 +113,13 @@
                 inp.value='';
                 inp.focus();
             }
+            else{   alert("INPUT FIELD CAN NOT BE EMPTY")}
         }
         document.addEventListener('click',function(e){
             if(e.target && e.target.id == 'tick'){
                 e.target.parentNode.classList.toggle('line');
             }
-        
+            
             if(e.target.id == 'dlt'){
                 e.target.parentNode.remove();
             }
