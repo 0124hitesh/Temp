@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 16</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background: linear-gradient(to right, rgb(163, 224, 245) 0%, rgb(83, 83, 224) 100%);
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        #inp{
+            width: 350px;
+            /* flex: 1; */
+            outline: none;
+            font-size: 30px;
+            border: 0;
+            padding: 5px;
+        }
+        .fa-plus-square{
+           color: blue;
+           font-size: 25px;
+        }
+        .fa{    pointer-events: none;}
+        #add{
+            font-size: 30px;
+            padding: 5px 10px 5px 10px;
+            border: 0;
+            outline: none;
+            background-color: white;
+        }
+        #add:hover,.td{
+            background-color:aquamarine;
+        }
+
+        #con_ul{
+            display: flex;
+            justify-content: center;
+        }
+        #todo{
+            display: table-row;
+            list-style-type: none;
+        }
+        #todo .li_items{
+            background-color: white;
+            margin: 10px auto;
+            list-style-type:none;
+            font-size: 30px;
+            min-width: 330px;
+            display: flex;  
+            align-items: center;
+        }
+        .sp{
+            flex: 1;
+            margin-left: 5px;
+            margin-right: 20px;
+        }
+        .td{
+            font-size: 25px;
+            outline: none;
+            border: 0;
+            padding: 5px;
+            width: 40px;
+        }
+        #tick{  background-color: rgb(118, 248, 118); }
+        #tick:hover{    background-color: rgba(32, 173, 32, 0.5); }
+        #dlt{   background-color: rgb(216, 112, 147); }
+        #dlt:hover{ background-color:  rgb(216, 112, 147,.5)}
+       
+       .line{   
+           text-decoration: line-through;
+           opacity: .7;
+           }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 55px;">Fullstack To-Do List</h1>
+    <section id="main">
+        <input id="inp" type="text">
+            <button  id="add">
+                <i class="fa fa-plus-square"></i>
+            </button>
+    </section>
+
+    <div id="con_ul"><ul id="todo"></ul></div>
+    <script>
+        var todo=document.querySelector("#todo");
+        var add=document.querySelector("#add");
+        var inp=document.getElementById("inp");
+        add.onclick=items;
+
+        function items(){
+           
+            if(inp.value.length > 0){
+                window.a=document.createElement('li');
+                a.classList.add("li_items");
+                todo.appendChild(a);
+                a.innerHTML='<span class="sp">'+inp.value +'</span>'+ 
+                    '<button class="td" id="tick"><i class="fa fa-check"></i></button>' + 
+                    '<button class="td" id="dlt"><i class="fa fa-trash-o"></i></button>';
+
+                inp.value='';
+                inp.focus();
+            }
+        }
+        document.addEventListener('click',function(e){
+            if(e.target.className == 'td'){
+                a.classList.toggle('line');
+            }
+        });
+
+        document.addEventListener('click',function(e){
+            if(e.target.id == 'dlt'){
+                a.remove();
+            }
+        });
+        
+    </script>
+</body>
+</html>
