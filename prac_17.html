@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Quicksand', sans-serif;
+        }
+        #time{
+            margin-top: 7vw;
+            font-size: 10vw;
+        }
+        #greet{
+            font-size: 3vw;
+            /* margin-bottom: 8px; */
+        }
+        #name{
+            font-size: 6vw; 
+            margin-top: 1vw;
+        }
+        #date{
+            margin-top: 1vw;  
+            font-size: 3vw; 
+            }
+        .fas{
+            position: fixed;
+            bottom: 15px;
+            right: 20px;
+            font-size: xx-large;
+            transition: .4s;
+        }
+        #time_format{
+            position: fixed;
+            bottom: 23px;
+            right: 63px;
+        }
+        #ton{   
+            display: none;
+            color: rgb(158, 158, 240);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        @media (max-width: 650px){
+            #time{
+                margin-top: 30vw;
+                font-size: 17vw;
+            }
+            #name{  font-size: 10vw;    }
+            #greet,#date{
+                font-size: 5vw;
+        }
+        @media (max-width: 370px){
+                #time{  margin-top: 35vw;}
+            }
+        }
+    </style>
+</head>
+<body>
+    <time id="time"></time>
+    <h2 id="greet">Goooooood</h2>
+    <h3 id="name" contenteditable="true">Name.....</h3>
+    <date id="date"></date>
+    <picture id="pic"></picture>
+    <span id="time_format">24-Hour</span>
+    <i class="fas fa-toggle-off" id="tof"></i>
+    <i class="fas fa-toggle-on" id="ton"></i>
+
+    <script>
+        var time=document.getElementById('time');
+        var greet=document.getElementById('greet');
+        // can't add event Listener on var so const
+        const name=document.getElementById('name');
+        var date=document.getElementById('date');
+        var pic=document.getElementById('pic');
+        var greet=document.getElementById('greet');
+
+        name.addEventListener("blur",setName);
+        name.addEventListener("keypress",setName);
+
+        //setNAme function
+        function setName(e){
+            if(e.type == "keypress"){
+                if(e.keyCode == 13){
+                    localStorage.setItem('namee',e.target.innerHTML);
+                    name.blur();
+                }
+            }
+            else{
+                localStorage.setItem('namee',e.target.innerHTML);
+            }
+        }
+
+        //getname function
+        function getName(){
+            if(localStorage.getItem('name') == '');
+            else
+            name.innerHTML=localStorage.getItem('namee');
+        }
+
+        //Add zero function
+        function az(n){
+            return (n<10 ? '0'+n:n);
+        }
+
+        //shhowtime function
+        var y=parseInt(0);
+        function showtime(){
+            var x=new Date();
+            var hours=x.getHours();
+            var min=x.getMinutes();
+            var sec=x.getSeconds();
+
+            //set image
+            if(hours<4 || hours>19){
+                greet.innerHTML='Good Night';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/cool-riding-bike-at-night_bGhlbGaUmZqaraWkpJRnamtlrWZpaWU.jpg" alt="">';
+            }
+            else if(hours > 4 && hours < 12){
+                greet.innerHTML='Good Morning';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/small-memory_am1pa2aUmZqaraWkpJRobWllrWdma2U.jpg" alt="">';
+                
+            }
+            else if(hours < 16){
+                greet.innerHTML='Good Afternoon';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/windmill-on-wheat-field-at-sunset_bGduZmqUmZqaraWkpJRnZWltrWZmamc.jpg" alt="">';
+            }
+            else if(hours >15){
+                greet.innerHTML='Good Evening';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/morning-field_a2lrammUmZqaraWkpJRobWllrWdma2U.jpg" alt="">';
+            }
+
+
+            var apm= hours>=12 ? 'PM' : 'AM';
+            hours=hours%12 || 12;
+
+            document.addEventListener('click',function(e){
+                if(e.target.id == 'tof'){
+                    y=parseInt(1);
+                    document.getElementById('tof').style.display='none';
+                    document.getElementById('ton').style.display='unset';
+                }
+                else if(e.target.id == 'ton'){
+                    y=parseInt(0);
+                    document.getElementById('ton').style.display='none';
+                    document.getElementById('tof').style.display='unset';
+                }
+
+            });
+
+            if(y == 0)
+                //time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
+                time.innerHTML=az(hours)+ ":" + az(min) + ":" + az(sec)+" "+apm;
+            else{
+                hours=x.getHours();
+                time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
+            }
+
+            //showdate
+            var d=String(x);
+            d=d.substr(0,15);
+            date.innerHTML=d;
+
+           setTimeout(showtime,999);
+        }
+
+        
+
+        //function call
+       showtime();
+       getName();
+       setName();
+       
+    </script>
+</body>
+</html>
