@@ -3,60 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CLOCK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body{
-            background-color:aqua;
-        }
-         section{
-             display: flex;
-             justify-content: center;
-           text-align: center;
-        } 
-                ul{
-            display: table-row;  
-           list-style-type: none;
-           text-align: center;
-        }
-        
-        ul li{
             display: flex;
-            justify-content: space-between;
-            background-color: white;
-            margin: 10px ;
-            text-align: center;
-            /* display: flex; */
-            /* min-width: 200px; */
-            
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Quicksand', sans-serif;
         }
-        span{
-            flex: 1;
-        } 
-       
+        #time{
+            margin-top: 10vw;
+            font-size: 160px;
+        }
+        #greet{
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+        #name{
+            font-size: 48px;
+        }
+        .fas{
+            position: fixed;
+            bottom: 15px;
+            right: 20px;
+            font-size: xx-large;
+            transition: .4s;
+        }
+        #time_format{
+            position: fixed;
+            bottom: 23px;
+            right: 63px;
+        }
+        #ton{   
+            display: none;
+            color: blue;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
-    <section id="sec">
-        <ul id="ull">
-            <!-- <div><li><span>jhjhjjjjjjjjjjh</span><i class="fa fa-check"></i></li></div>
-            <div><li><span>jhjh3t4jh</span><i class="fa fa-check"></i></li></div>
-            <div><li><span>jdddddddhjhjh</span><i class="fa fa-check"></i></li></div>  -->
+    <time id="time"></time>
+    <h2 id="greet">Goooooood</h2>
+    <h3 id="name">Nameeeeee</h3>
+    <date id="date"></date>
+    <picture id="pic"></picture>
+    <span id="time_format">24-Hour</span>
+    <i class="fas fa-toggle-off" id="tof"></i>
+    <i class="fas fa-toggle-on" id="ton"></i>
 
-             <li class="lii">aaaaaaaaaa<i class="fa fa-check"></i></li>
-            <li class="lii">aaaaa<i class="fa fa-check"></i></li>
-            <li class="lii">aaaaaaadddahhhhaa<i class="fa fa-check"></i></li> 
-            
-        </ul>
-    </section>
     <script>
-        var a=document.getElementById('sec');
-        console.log(a.childNodes.nodeName);
-        console.log(a.childNodes[0]);
+        var time=document.getElementById('time');
+        var greet=document.getElementById('greet');
+        var name=document.getElementById('name');
+        var date=document.getElementById('date');
+        var pic=document.getElementById('pic');
+        var greet=document.getElementById('greet');
 
-        var b=document.querySelector('ul');
-        conosle.log(b.parentElement.nodeName);
+        //Add zero function
+        function az(n){
+            return (n<10 ? '0'+n:n);
+        }
+
+        //shhowtime function
+        var y=parseInt(0);
+        function showtime(){
+            var x=new Date();
+            var hours=x.getHours();
+            var min=x.getMinutes();
+            var sec=x.getSeconds();
+
+            //set image
+            if(hours<5 || hours>19){
+                greet.innerHTML='Good Night';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/cool-riding-bike-at-night_bGhlbGaUmZqaraWkpJRnamtlrWZpaWU.jpg" alt="">';
+            }
+            else if(hours > 5 && hours < 12){
+                greet.innerHTML='Good Morning';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/morning-field_a2lrammUmZqaraWkpJRobWllrWdma2U.jpg" alt="">';
+            }
+            else if(hours < 15){
+                greet.innerHTML='Good Afternoon';
+                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/brown-leafed-tree-on-open-field_a2hqZmuUmZqaraWkpJRmbmdlrWZlbWU.jpg" alt="">';
+            }
+            else if(hours >14){
+                gr.innerHTML='Good Evening';
+                pic.innerHTML='<img src="" alt="https://images.wallpapersden.com/image/download/fire-sunset-at-road-4k_bGdqbGiUmZqaraWkpJRobWllrWdma2U.jpg">';
+            }
+
+
+            var apm= hours>=12 ? 'PM' : 'AM';
+            hours=hours%12 || 12;
+
+            document.addEventListener('click',function(e){
+                if(e.target.id == 'tof'){
+                    y=parseInt(1);
+                    document.getElementById('tof').style.display='none';
+                    document.getElementById('ton').style.display='unset';
+                }
+                else if(e.target.id == 'ton'){
+                    y=parseInt(0);
+                    document.getElementById('ton').style.display='none';
+                    document.getElementById('tof').style.display='unset';
+                }
+
+            });
+
+            if(y == 0)
+                time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
+            else{
+                hours=x.getHours();
+                time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
+            }
+
+           setTimeout(showtime,999);
+        }
+
+        //function call
+       showtime();
+       
     </script>
 </body>
 </html>
