@@ -29,7 +29,7 @@
             /* margin-bottom: 8px; */
         }
         #name{
-            font-size: 6vw;
+            font-size: 6vw; 
             margin-top: 1vw;
         }
         #date{
@@ -70,7 +70,7 @@
                 font-size: 5vw;
         }
         @media (max-width: 370px){
-                #time{  margin-top: 33vw;}
+                #time{  margin-top: 35vw;}
             }
         }
     </style>
@@ -167,7 +167,8 @@
             });
 
             if(y == 0)
-                time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
+                //time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
+                time.innerHTML=az(hours)+ ":" + az(min) + ":" + az(sec)+" "+apm;
             else{
                 hours=x.getHours();
                 time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
