@@ -50,7 +50,7 @@
         }
         #ton{   
             display: none;
-            color: blue;
+            color: rgb(158, 158, 240);
         }
         img{
             width: 100%;
@@ -59,6 +59,19 @@
             top: 0;
             left: 0;
             z-index: -1;
+        }
+        @media (max-width: 650px){
+            #time{
+                margin-top: 30vw;
+                font-size: 17vw;
+            }
+            #name{  font-size: 10vw;    }
+            #greet,#date{
+                font-size: 5vw;
+        }
+        @media (max-width: 370px){
+                #time{  margin-top: 33vw;}
+            }
         }
     </style>
 </head>
@@ -99,7 +112,7 @@
 
         //getname function
         function getName(){
-            if(localStorage.getItem('name') == null);
+            if(localStorage.getItem('name') == '');
             else
             name.innerHTML=localStorage.getItem('namee');
         }
