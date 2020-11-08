@@ -20,8 +20,11 @@
             flex-direction: column;
             font-family: 'Quicksand', sans-serif;
         }
-        #time{
+        section{
             margin-top: 7vw;
+        }
+        #time{
+           
             font-size: 10vw;
         }
         #apm{   
@@ -83,7 +86,8 @@
                 margin-top: 2vw;
         }
         @media (max-width: 370px){
-                #time{  margin-top: 25vw;}
+                section{  margin-top: 25vw;}
+                #greet{ margin-top: 6vw;}
             }
         }
     </style>
@@ -194,6 +198,7 @@
             else{
                 hours=x.getHours();
                 time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
+                ap.innerHTML='';
             }
 
             //showdate
