@@ -24,9 +24,14 @@
             margin-top: 7vw;
             font-size: 10vw;
         }
+        #apm{   
+            font-size: 10vw; 
+            display: inline-block;
+            margin-top: 0;  
+        }
         #greet{
             font-size: 3vw;
-            /* margin-bottom: 8px; */
+            font-weight: 600;
         }
         #name{
             font-size: 6vw; 
@@ -35,6 +40,7 @@
         #date{
             margin-top: 1vw;  
             font-size: 3vw; 
+            font-weight: 600;
             }
         .fas{
             position: fixed;
@@ -61,25 +67,37 @@
             z-index: -1;
         }
         @media (max-width: 650px){
+            section{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
             #time{
-                margin-top: 30vw;
+                margin-top: 15vw;
                 font-size: 17vw;
             }
+            #apm{   font-size: 17vw;}
             #name{  font-size: 10vw;    }
             #greet,#date{
                 font-size: 5vw;
+                margin-top: 2vw;
         }
         @media (max-width: 370px){
-                #time{  margin-top: 35vw;}
+                #time{  margin-top: 25vw;}
             }
         }
     </style>
 </head>
 <body>
-    <time id="time"></time>
+    <section>
+        <time id="time"></time>
+        &nbsp;
+        <div id="apm"></div>
+    </section>
     <h2 id="greet">Goooooood</h2>
     <h3 id="name" contenteditable="true">Name.....</h3>
     <date id="date"></date>
+    
     <picture id="pic"></picture>
     <span id="time_format">24-Hour</span>
     <i class="fas fa-toggle-off" id="tof"></i>
@@ -93,6 +111,8 @@
         var date=document.getElementById('date');
         var pic=document.getElementById('pic');
         var greet=document.getElementById('greet');
+
+        var ap=document.getElementById('apm');
 
         name.addEventListener("blur",setName);
         name.addEventListener("keypress",setName);
@@ -112,9 +132,8 @@
 
         //getname function
         function getName(){
-            if(localStorage.getItem('name') == '');
-            else
-            name.innerHTML=localStorage.getItem('namee');
+            if(localStorage.getItem('namee').length > 1)
+                name.innerHTML=localStorage.getItem('namee');
         }
 
         //Add zero function
@@ -167,9 +186,11 @@
 
             });
 
-            if(y == 0)
+            if(y == 0){
                 //time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
-                time.innerHTML=az(hours)+ ":" + az(min) + ":" + az(sec)+" "+apm;
+                time.innerHTML=az(hours)+ ":" + az(min) + ":" + az(sec);
+                ap.innerHTML=apm;
+            }
             else{
                 hours=x.getHours();
                 time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
