@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <p id="pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, necessitatibus?</p>
+    <button id="btn" onclick="show()">Click</button>
+    <p id="re"></p>
+
+    <script>
+        // g-global, i-case insensitive, m-multiple matching
+        // var pattern=new RegExp("pat to match",attribute); 
+
+        //var pat=new RegExp("abc",g);
+        //var pat=/abc/g;
+
+        function show(){
+            var str="hey to andh abc and fuck  to tooouiokk lop";
+            //var p=/to/;
+            var p=/to/g;
+            var res=str.match(p);
+            document.getElementById("re").innerHTML=res;
+        }
+
+
+    </script>
+</body>
+</html>
