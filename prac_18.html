@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-18</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        body{
+            background-color: rgb(153, 43, 226);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        section{
+            background-color: white;
+            width: 450px;
+            padding: 4%;
+            padding-top:20px ;
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        button[type='submit']{
+            padding: 5px;
+        }
+        article{
+            width: 92%;
+            font-size: large;
+            position: relative;
+            margin-bottom: 25px;
+        }
+        input[type='text']{
+            width: 92%;
+            margin: 5px 0px 2px 0;
+            font-size: 20px;
+            padding: 3px;
+            outline: 0px;
+            border: 1px solid black;
+            
+        }
+        .fas{
+            position: absolute;
+            right: 0px;
+            top: 25.5px;
+            z-index: 1;
+            border:1px solid black;
+            border-left: none;
+            padding: 4.5px;
+            font-size: 20px;
+        }
+        .tick input, .cross input{
+            border-right: none;
+          }
+        .fa-times-circle, .fa-check-circle{
+            display: none;
+        }
+        .tick input{
+            border: 2px solid green;
+            border-right: none; 
+        }
+        .tick .fa-check-circle{
+            padding: 4.8px;
+            border: 2px solid green;
+            border-left: none;
+            color: green;
+        }
+        .tick #msg {    color: green;}
+
+        .cross input{
+            border: 2px solid red;
+            border-right: none; 
+        }
+        .cross .fa-times-circle{
+            padding: 4.8px;
+            border: 2px solid red;
+            border-left: none;
+            color: red;
+        }
+        .cross #msg{    color: red;}
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>heading</h1>
+        <form action="">
+            <article class="">
+                <span style="font-weight: 550;">Username</span>
+                <br>
+                <input type="text" name="" id="user" placeholder="Enter username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-times-circle"></i>
+                <span id="msg">Message</span>
+            </article>
+
+            <article class="">
+                <span style="font-weight: 550;">E-mail</span>
+                <br>
+                <input type="text" name="" id="user" placeholder="Enter email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-times-circle"></i>
+                <span id="msg">Message</span>
+            </article>
+
+            <article class="">
+                <span style="font-weight: 550;">Password</span>
+                <br>
+                <input type="text" name="" id="user" placeholder="Enter Password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-times-circle"></i>
+                <span id="msg">Message</span>
+            </article>
+
+            <article class="">
+                <span style="font-weight: 550;">Re-enter Password</span>
+                <br>
+                <input type="text" name="" id="user" placeholder="Re-enter Password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-times-circle"></i>
+                <span id="msg">Message</span>
+            </article>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
