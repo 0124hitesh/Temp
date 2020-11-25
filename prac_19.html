@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-19</title>
+
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: content-box;
+        }
+        body{   
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main{
+            width: 360px;
+            height: 400px;
+            background-color: #fff;
+            margin-top: 17vh;
+            border-radius: 5px;
+            position: relative !important;
+            overflow: hidden;
+        }
+        #step{
+            display: flex;
+            box-shadow: 0 2px rgba(0,0,0,.2);
+            position: relative ;
+            padding: 10px;
+        }
+        #dp{
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 120px;
+            height: 42px;
+            background-color: deeppink;
+            transition: .4s
+        }
+        #dp::after{
+        content: '';
+        height: 0;
+        width: 0px;
+        position: absolute;
+        top: 0;
+        right: -25px;
+        border-top: 21px  solid transparent;
+        border-bottom: 21px solid transparent;
+        border-left: 25px solid deeppink;
+        }
+        .prog{
+            width: 120px;
+            font-size: 20px;
+            z-index: 1;
+            text-align: center;
+        }
+        #form1, #form2, #form3{
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            transition: .4s !important;
+        }
+        #form1{ left: 0px;}
+        #form2{ right: -360px; }
+        #form3{ right: -720px;  }
+        h2{
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        div{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+        div input{
+            margin-bottom: 10px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+        #next1{
+            display: block;
+            margin: 20px auto;
+            width: 80px;
+            height: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: deeppink;
+            font-weight: 600;
+        }
+        #back1,#next2,#back2,#sbmt{
+            display: block;
+            margin-top: 20px;
+            width: 80px;
+            height: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: deeppink;
+            font-weight: 600;
+        }
+        .btns{
+            width: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+        <section id="step">
+            <article id="dp"></article>
+            <article class="prog">Step 1</article>
+            <article class="prog">Step 2</article>
+            <article class="prog">Step 3</article>
+        </section>
+
+        <form action="" id="form1">
+            <section id="form1">
+                <h2>CREATE ACCOUNT</h2>
+                <div>
+                    <input type="text" placeholder="Enter Email">
+                    <input type="password" placeholder="Enter Password">
+                    <input type="password" placeholder="Re-Enter Password">
+                </div>
+                <button type="button" id="next1">Next</button>
+            </section>
+
+            <section id="form2">
+                <h2>SOCIAL LINKS</h2>
+                <div>
+                    <input type="text" placeholder="LinkedIn">
+                    <input type="password" placeholder="GitHub">
+                    <input type="password" placeholder="Facebook">
+                </div>
+                <article class="btns">
+                    <button type="button" id="back1">Back</button>
+                    <button type="button" id="next2">Next</button>
+                </article>
+            </section>
+        
+            
+            <section id="form3">
+                <h2>PERSONAL INFORMATION</h2>
+                <div>
+                    <input type="text" placeholder="First Name">
+                    <input type="password" placeholder="Last Name">
+                    <input type="password" placeholder="Mobile Number">
+                </div>
+                <article class="btns">
+                    <button type="button" id="back2">Back</button>
+                    <button type="submit" id="sbmt">Submit</button>
+                </article>
+            </section>
+        </form>
+    </section>
+
+    <script>
+        const dp=document.getElementById('dp');
+        const f1=document.getElementById('form1');
+        const f2=document.getElementById('form2');
+        const f3=document.getElementById('form3');
+
+        const n1=document.getElementById('next1');
+        const b1=document.getElementById('back1');
+        const n2=document.getElementById('next2');
+        const b2=document.getElementById('back2');
+        const sbmt=document.getElementById('sbmt');
+
+        n1.onclick=function(){
+             f1.style.left='-360px';
+             dp.style.width='240px';
+        }
+        b1.onclick=function(){
+             dp.style.width='120px';
+             f1.style.left='0';
+        }
+        n2.onclick=function(){
+            dp.style.width='360px';
+            f1.style.left='-720px';
+        }
+        b2.onclick=function(){
+            dp.style.width='240px';
+            f1.style.left='-360px';
+        }
+        
+    </script>
+</body>
+</html>
