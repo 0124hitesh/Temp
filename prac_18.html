@@ -18,120 +18,197 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: sans-serif;
         }
         section{
             background-color: white;
             width: 450px;
             padding: 4%;
-            padding-top:20px ;
+            padding-top: 20px;
+            border-radius: 8px;
         }
         h1{
             font-size: 40px;
             text-align: center;
             padding-bottom: 50px;
         }
-        button[type='submit']{
-            padding: 5px;
+        form{
+            width: 92%;
+            margin: 0 0 0 10px;
         }
         article{
-            width: 92%;
             font-size: large;
             position: relative;
             margin-bottom: 25px;
         }
-        input[type='text']{
-            width: 92%;
-            margin: 5px 0px 2px 0;
+        input{
+            width: 100% ;
+            margin: 5px auto;
             font-size: 20px;
             padding: 3px;
             outline: 0px;
             border: 1px solid black;
-            
+            background-color: white;
+            border-radius: 5px;
         }
-        .fas{
+        input:focus{
+            background-color:white;
+        }
+        .fas{    display: none;}
+        div{    
+            background-color: white;
             position: absolute;
-            right: 0px;
-            top: 25.5px;
-            z-index: 1;
-            border:1px solid black;
-            border-left: none;
-            padding: 4.5px;
-            font-size: 20px;
-        }
-        .tick input, .cross input{
-            border-right: none;
-          }
-        .fa-times-circle, .fa-check-circle{
-            display: none;
-        }
-        .tick input{
-            border: 2px solid green;
-            border-right: none; 
-        }
-        .tick .fa-check-circle{
-            padding: 4.8px;
-            border: 2px solid green;
-            border-left: none;
-            color: green;
-        }
-        .tick #msg {    color: green;}
-
-        .cross input{
-            border: 2px solid red;
-            border-right: none; 
+            top: 29px;
+            right: -5px;
+            font-size: 20.3px;
+            padding: 2px 5px;
         }
         .cross .fa-times-circle{
-            padding: 4.8px;
-            border: 2px solid red;
-            border-left: none;
+            display: unset;
+            background-color: solid white;
             color: red;
         }
-        .cross #msg{    color: red;}
-        
+        .cross .fa-check-circle{   display: none; }
+        .cross .msg{    color: red;}
+        .cross input{
+            border: 2px solid red;
+        }
+        .tick .fa-check-circle{
+            display: unset;
+            background-color: solid white;
+            color: green;
+        }
+        .tick .fa-times-circle{ display: none;}
+        .tick input{
+            border: 2px solid green;
+        }
+        .tick .msg{ display: none;}
+        button[type='submit']{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 0;
+            background-color: rgb(153, 43, 226);
+            color: white;
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
     <section>
-        <h1>heading</h1>
+        <h1>Create Account</h1>
         <form action="">
-            <article class="">
+            <article class="" id="user">
                 <span style="font-weight: 550;">Username</span>
                 <br>
-                <input type="text" name="" id="user" placeholder="Enter username">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-times-circle"></i>
-                <span id="msg">Message</span>
+                <input type="text" name="" id="u" placeholder="Enter username">
+                <div><i class="fas fa-check-circle"></i></div>
+                <div><i class="fas fa-times-circle"></i></div>
+                <span id="user_msg" class="msg"></span>
             </article>
 
-            <article class="">
-                <span style="font-weight: 550;">E-mail</span>
+            <article class="" id="email">
+                <span style="font-weight: 550;">Email</span>
                 <br>
-                <input type="text" name="" id="user" placeholder="Enter email">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-times-circle"></i>
-                <span id="msg">Message</span>
+                <input type="text" name="" id="e" placeholder="Enter email">
+                <div><i class="fas fa-check-circle"></i></div>
+                <div><i class="fas fa-times-circle"></i></div>
+                <span id="email_msg" class="msg"></span>
             </article>
 
-            <article class="">
+            <article class="" id="pass">
                 <span style="font-weight: 550;">Password</span>
                 <br>
-                <input type="text" name="" id="user" placeholder="Enter Password">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-times-circle"></i>
-                <span id="msg">Message</span>
+                <input type="password" name="" id="p" placeholder="Enter Password">
+                <div><i class="fas fa-check-circle"></i></div>
+                <div><i class="fas fa-times-circle"></i></div>
+                <span id="pass_msg" class="msg"></span>
             </article>
 
-            <article class="">
-                <span style="font-weight: 550;">Re-enter Password</span>
+            <article class="" id="cp">
+                <span style="font-weight: 550;">Confirm Password</span>
                 <br>
-                <input type="text" name="" id="user" placeholder="Re-enter Password">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-times-circle"></i>
-                <span id="msg">Message</span>
+                <input type="password"  id="cpass" placeholder="Re-Enter Password">
+                <div><i class="fas fa-check-circle"></i></div>
+                <div><i class="fas fa-times-circle"></i></div>
+                <span id="cp_msg" class="msg"></span>
             </article>
 
-            <button type="submit">Submit</button>
+            
+            <button type="submit" id="btn">Submit</button>
         </form>
     </section>
+
+    <script>
+        var user=document.getElementById('user');
+        var email=document.getElementById('email');
+        var pass=document.getElementById('pass');
+        var cp=document.getElementById('cp');
+
+        var user_msg=document.getElementById('user_msg');
+        var email_msg=document.getElementById('email_msg');
+        var pass_msg=document.getElementById('pass_msg');
+        var cp_msg=document.getElementById('cp_msg');
+
+        var u=document.getElementById('u');
+        var em=document.getElementById('e');
+        var p=document.getElementById('p');
+        var cpass=document.getElementById('cpass');
+
+
+        function nok(v1,v2,field){
+         v2.innerHTML=field+" can't be blank."
+         v1.classList.remove('tick');
+         v1.classList.add('cross');
+        }
+
+        var pa=/([\w \d])+([@]){1}([\w])+[.]{1}((com)|(co)|(in))$/;
+        
+        var btn=document.getElementById('btn');
+        btn.onclick=function(e){
+            
+            e.preventDefault();
+
+            u.value.trim();
+            if(u.value === ''){
+                nok(user,user_msg,"Username");
+            }
+            else{
+                user.classList.remove('cross')
+                user.classList.add('tick');
+            }
+
+            if(em.value === '')
+                nok(email,email_msg,"Email");
+            else if(!em.value.match(pa)){
+                email.classList.remove('tick');
+                email_msg.innerHTML='Invalid Format';
+                email.classList.add('cross');
+            }
+            else{
+                email.classList.remove('cross');
+                email.classList.add('tick');
+            }
+
+            if(p.value === '')
+                nok(pass,pass_msg,"Password");
+            else{
+                pass.classList.remove('cross');
+                pass.classList.add('tick');
+            }
+
+            if(cpass.value === '')
+                nok(cp,cp_msg,"Confirm Password");
+            else if(p.value != cpass.value){
+                cp.classList.remove('tick');
+                cp.classList.add('cross');
+                cp_msg.innerHTML="Password did't match."
+            }
+            else{
+                cp.classList.remove('cross');
+                cp.classList.add('tick');
+            }
+        }
+    </script>
 </body>
 </html>
