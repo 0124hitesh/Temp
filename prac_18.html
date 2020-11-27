@@ -163,7 +163,8 @@
         }
 
         var pa=/([\w \d])+([@]){1}([\w])+[.]{1}((com)|(co)|(in))$/;
-        
+        var pa1=/[^a-z]/g;
+        // var pa2=/ /;
         var btn=document.getElementById('btn');
         btn.onclick=function(e){
             
@@ -172,6 +173,11 @@
             u.value.trim();
             if(u.value === ''){
                 nok(user,user_msg,"Username");
+            }
+            else if(u.value.match(pa1)){
+                user.classList.remove('tick');
+                user_msg.innerHTML='Invalid Format';
+                user.classList.add('cross');
             }
             else{
                 user.classList.remove('cross')
