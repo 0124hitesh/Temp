@@ -4,228 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <style>
-    *{
-        margin: 0;padding: 0;
-        box-sizing:content-box;
-    }
-    body{
-        overflow: scroll;
-    }
-    #bg_img{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-    #common{
-        width: 980px;
-        margin: 0 auto;
-        display: flex;
-    }
-    #res_name{
-        background-color: rgb(38, 50, 56);
-        color: white;
-        width: 300px;
-        height: 130px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-        flex-direction: column;
-        position: relative;
-        font-family: 'Yellowtail', cursive;
-    }
-    #res_name::after{
-        content: '';
-        width: 70%;
-        height: 1px;
-        background-color: white;
-        position: absolute;
-        bottom: 10px;
-    }
-    #nav_bar{
-        list-style: none;
-        width: 680px;
+    .ma{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        text-transform: uppercase;
-        font-family: 'Source Sans Pro', sans-serif;
+        background-color: lightblue;
     }
-    #nav_bar a{
-        text-decoration: none;
-        color: rgb(158, 158, 158);
-        font-size: 15px;
+    .info{
+        background-color: coral;
     }
-
-    #sec2{
-        width: 980px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 50px;
-    }
-    #left_bar{
-        background-color: rgb(38, 50, 56);
-        width: 280px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        flex-direction: column;
-        padding: 25px 10px;
-    }
-    #left_bar p{
-        width: 80%;
-        text-align: justify;
-        font-size: 15px;
-    }
-    
-    #left_bar input, #left_bar button{
-        background-color: rgb(38, 50, 56);
-        color: white;
-        width: 90%;
-        height: 29px;
-        border: 1px solid white;
-        font-size: larger;
-        padding: 5px;
-    }
-    #time::placeholder, #size::placeholder{
-        color: white;
-    }
-    #left_bar button{   
-        background-color: rgb(236, 239, 241);
-        color: black;
-        outline: none;
-        border: none;
-    }
-    #left_bar button:hover{
-        background-color: rgba(236, 239, 241,.8);
-    }
-    #address{
-        margin-top: 80px;
-        position: relative;
-        padding-top: 50px;
-    }
-    #address::before{
-        content: '';
-        height: 1px;
-        width: 200px;
-        background-color: white;
-        position: absolute;
-        top: 0px;
-        left: -23px;
-    }
-    .addr{
-        width: 100% !important;
-        font-size: 12px !important;
-        text-align: center !important;
-        margin-bottom: 5px;
-        font-family: sans-serif;
-    }
-    #social{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 30px;
-        font-size: 20px;
-    }
-
-    #right_bar{
-        width: 650px;
-        background-color: rgb(38, 50, 56);
-    }
+    /* p{
+        cursor: default;
+    } */
 </style>
 <body>
-    <img  id="bg_img" src=".\img\vege1.jpg" alt="">
-    <section id="common">
-        <article id="res_name">
-            Alex.JS
-        </article>
-        <ul id="nav_bar">
-            <li><a href="">Home</a></li>
-            <li><a href="">Bar</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Order online</a></li>
-            <li><a href="">team</a></li>
-            <li><a href="">contact</a></li>
-        </ul>
+    <section id="main" class="ma" onclick="fun(z=this.childNodes)">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dolor?</p>
+        <span>10</span>
+    </section>
+    <!-- <button id="main" class="ma" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dolor?</p>
+        <span>10</span>
+    </button> -->
+
+    <!-- <button id="main" class="ma">
+        <p>?</p>
+        <span>10</span>
+    </button> -->
+
+    <section class="info" id="info">
+        <p></p>
+        <span></span>
+        <button id="btn_sub">-</button>
+        <input type="number" name="" id="" min="1">
+        <button id="btn_add">+</button>
     </section>
 
-    <section id="sec2">
-        <section id="left_bar">
-            <h3>WELCOME!</h3><br><br>
-            <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, illum! Aspernatur voluptate sapiente earum nemo suscipit, deserunt maiores libero nam.</p>
-            <br><br><br><br><br>
-            <h3>RESERVATION</h3>
-            <br><br>
-
-            <input type="date">
-            <br>
-
-            <input list="time" placeholder="Time" id="time">
-            <datalist id="time">
-                <option value="09:00 AM"></option>
-                <option value="10:00 AM"></option>
-                <option value="11:00 AM"></option>
-                <option value="12:00 PM"></option>
-                <option value="01:00 PM"></option>
-                <option value="02:00 PM"></option>
-                <option value="03:00 PM"></option>
-                <option value="04:00 PM"></option>
-                <option value="05:00 PM"></option>
-                <option value="06:00 PM"></option>
-                <option value="07:00 PM"></option>
-                <option value="08:00 PM"></option>
-                <option value="09:00 PM"></option>
-                <option value="10:00 PM"></option>
-            </datalist>
-            <br>
-
-            <input list="person" placeholder="Party Size" id="size">
-            <datalist id="person">
-                <option value="1 Person"></option>
-                <option value="2 Person"></option>
-                <option value="3 Person"></option>
-                <option value="4 Person"></option>
-                <option value="5 Person"></option>
-                <option value="6 Person"></option>
-
-            </datalist>
-            <br>
-
-             <button type="button">Book Now</button>
-
-             <section id="address">
-                 <p class="addr">500 Terry Francois Street</p>
-                 <p class="addr">SF, CA 94158</p>
-                 <p class="addr">Open Everyday 9AM to 11PM</p>
-
-                 <article id="social">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-twitter"></i>
-                 </article>
-             </section>
-        </section>
-        
-        <section id="right_bar">
-
-        </section>
-
-        
-    </section>
-
+    <script>
+        var a=document.getElementById('info');
+        var b=document.getElementById('info').childNodes;
+    
+        function fun(){
+            b[1].innerHTML=z[1].innerHTML;
+            b[3].innerHTML=z[3].innerHTML;
+        }
+       
+    </script>
 </body>
 </html>
