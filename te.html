@@ -3,219 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLOCK</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Temp</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-family: 'Quicksand', sans-serif;
-        }
-        section{
-            margin-top: 7vw;
-        }
-        #time{
-           
-            font-size: 10vw;
-        }
-        #apm{   
-            font-size: 10vw; 
-            display: inline-block;
-            margin-top: 0;  
-        }
-        #greet{
-            font-size: 3vw;
-            font-weight: 600;
-        }
-        #name{
-            font-size: 6vw; 
-            margin-top: 1vw;
-        }
-        #date{
-            margin-top: 1vw;  
-            font-size: 3vw; 
-            font-weight: 600;
-            }
-        .fas{
-            position: fixed;
-            bottom: 15px;
-            right: 20px;
-            font-size: xx-large;
-            transition: .4s;
-        }
-        #time_format{
-            position: fixed;
-            bottom: 23px;
-            right: 63px;
-        }
-        #ton{   
-            display: none;
-            color: rgb(158, 158, 240);
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        @media (max-width: 650px){
-            section{
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-            #time{
-                margin-top: 15vw;
-                font-size: 17vw;
-            }
-            #apm{   font-size: 17vw;}
-            #name{  font-size: 10vw;    }
-            #greet,#date{
-                font-size: 5vw;
-                margin-top: 2vw;
-        }
-        @media (max-width: 370px){
-                section{  margin-top: 25vw;}
-                #greet{ margin-top: 6vw;}
-            }
-        }
-    </style>
 </head>
-<body>
-    <section>
-        <time id="time"></time>
-        &nbsp;
-        <div id="apm"></div>
-    </section>
-    <h2 id="greet">Goooooood</h2>
-    <h3 id="name" contenteditable="true">Name.....</h3>
-    <date id="date"></date>
+<style>
+    *{
+        margin: 0;padding: 0;
+        box-sizing:content-box;
+    }
+    body{
+        overflow: scroll;
+    }
+    #bg_img{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    #common{
+        width: 980px;
+        margin: 0 auto;
+        display: flex;
+    }
+    #res_name{
+        background-color: rgb(38, 50, 56);
+        color: white;
+        width: 300px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        flex-direction: column;
+        position: relative;
+        font-family: 'Yellowtail', cursive;
+    }
+    #res_name::after{
+        content: '';
+        width: 70%;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        bottom: 10px;
+    }
+    #nav_bar{
+        list-style: none;
+        width: 680px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    #nav_bar a{
+        text-decoration: none;
+        color: rgb(158, 158, 158);
+        font-size: 15px;
+    }
+
+    #sec2{
+        width: 980px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+    #left_bar{
+        background-color: rgb(38, 50, 56);
+        width: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+    #left_bar p{
+        width: 80%;
+        text-align: justify;
+        font-size: 15px;
+    }
     
-    <picture id="pic"></picture>
-    <span id="time_format">24-Hour</span>
-    <i class="fas fa-toggle-off" id="tof"></i>
-    <i class="fas fa-toggle-on" id="ton"></i>
+    #left_bar input, #left_bar button{
+        background-color: rgb(38, 50, 56);
+        color: white;
+        width: 90%;
+        height: 29px;
+        border: 1px solid white;
+        font-size: larger;
+        padding: 5px;
+    }
+    #time::placeholder, #size::placeholder{
+        color: white;
+    }
+    #left_bar button{   
+        background-color: rgb(236, 239, 241);
+        color: black;
+        outline: none;
+        border: none;
+    }
+    #left_bar button:hover{
+        background-color: rgba(236, 239, 241,.8);
+    }
+    #address{
+        margin-top: 80px;
+        position: relative;
+        padding-top: 50px;
+    }
+    #address::before{
+        content: '';
+        height: 1px;
+        width: 200px;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        left: -23px;
+    }
+    .addr{
+        width: 100% !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-bottom: 5px;
+        font-family: sans-serif;
+    }
+    #social{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 20px;
+    }
 
-    <script>
-        var time=document.getElementById('time');
-        var greet=document.getElementById('greet');
-        // can't add event Listener on var so const
-        const name=document.getElementById('name');
-        var date=document.getElementById('date');
-        var pic=document.getElementById('pic');
-        var greet=document.getElementById('greet');
+    #right_bar{
+        width: 650px;
+        background-color: rgb(38, 50, 56);
+    }
+</style>
+<body>
+    <img  id="bg_img" src=".\img\vege1.jpg" alt="">
+    <section id="common">
+        <article id="res_name">
+            Alex.JS
+        </article>
+        <ul id="nav_bar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Bar</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Order online</a></li>
+            <li><a href="">team</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </section>
 
-        var ap=document.getElementById('apm');
+    <section id="sec2">
+        <section id="left_bar">
+            <h3>WELCOME!</h3><br><br>
+            <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, illum! Aspernatur voluptate sapiente earum nemo suscipit, deserunt maiores libero nam.</p>
+            <br><br><br><br><br>
+            <h3>RESERVATION</h3>
+            <br><br>
 
-        name.addEventListener("blur",setName);
-        name.addEventListener("keypress",setName);
+            <input type="date">
+            <br>
 
-        //setNAme function
-        function setName(e){
-            if(e.type == "keypress"){
-                if(e.keyCode == 13){
-                    localStorage.setItem('namee',e.target.innerHTML);
-                    name.blur();
-                }
-            }
-            else{
-                localStorage.setItem('namee',e.target.innerHTML);
-            }
-        }
+            <input list="time" placeholder="Time" id="time">
+            <datalist id="time">
+                <option value="09:00 AM"></option>
+                <option value="10:00 AM"></option>
+                <option value="11:00 AM"></option>
+                <option value="12:00 PM"></option>
+                <option value="01:00 PM"></option>
+                <option value="02:00 PM"></option>
+                <option value="03:00 PM"></option>
+                <option value="04:00 PM"></option>
+                <option value="05:00 PM"></option>
+                <option value="06:00 PM"></option>
+                <option value="07:00 PM"></option>
+                <option value="08:00 PM"></option>
+                <option value="09:00 PM"></option>
+                <option value="10:00 PM"></option>
+            </datalist>
+            <br>
 
-        //getname function
-        function getName(){
-            if(localStorage.getItem('namee').length > 1)
-                name.innerHTML=localStorage.getItem('namee');
-        }
+            <input list="person" placeholder="Party Size" id="size">
+            <datalist id="person">
+                <option value="1 Person"></option>
+                <option value="2 Person"></option>
+                <option value="3 Person"></option>
+                <option value="4 Person"></option>
+                <option value="5 Person"></option>
+                <option value="6 Person"></option>
 
-        //Add zero function
-        function az(n){
-            return (n<10 ? '0'+n:n);
-        }
+            </datalist>
+            <br>
 
-        //shhowtime function
-        var y=parseInt(0);
-        function showtime(){
-            var x=new Date();
-            var hours=x.getHours();
-            var min=x.getMinutes();
-            var sec=x.getSeconds();
+             <button type="button">Book Now</button>
 
-            //set image
-            if(hours<4 || hours>19){
-                greet.innerHTML='Good Night';
-                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/cool-riding-bike-at-night_bGhlbGaUmZqaraWkpJRnamtlrWZpaWU.jpg" alt="">';
-            }
-            else if(hours > 4 && hours < 12){
-                greet.innerHTML='Good Morning';
-                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/small-memory_am1pa2aUmZqaraWkpJRobWllrWdma2U.jpg" alt="">';
-                
-            }
-            else if(hours < 16){
-                greet.innerHTML='Good Afternoon';
-                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/windmill-on-wheat-field-at-sunset_bGduZmqUmZqaraWkpJRnZWltrWZmamc.jpg" alt="">';
-            }
-            else if(hours >15){
-                greet.innerHTML='Good Evening';
-                pic.innerHTML='<img src="https://images.wallpapersden.com/image/download/morning-field_a2lrammUmZqaraWkpJRobWllrWdma2U.jpg" alt="">';
-            }
+             <section id="address">
+                 <p class="addr">500 Terry Francois Street</p>
+                 <p class="addr">SF, CA 94158</p>
+                 <p class="addr">Open Everyday 9AM to 11PM</p>
 
+                 <article id="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter"></i>
+                 </article>
+             </section>
+        </section>
+        
+        <section id="right_bar">
 
-            var apm= hours>=12 ? 'PM' : 'AM';
-            hours=hours%12 || 12;
-
-            document.addEventListener('click',function(e){
-                if(e.target.id == 'tof'){
-                    y=parseInt(1);
-                    document.getElementById('tof').style.display='none';
-                    document.getElementById('ton').style.display='unset';
-                }
-                else if(e.target.id == 'ton'){
-                    y=parseInt(0);
-                    document.getElementById('ton').style.display='none';
-                    document.getElementById('tof').style.display='unset';
-                }
-
-            });
-
-            if(y == 0){
-                //time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)} ${apm}`;
-                time.innerHTML=az(hours)+ ":" + az(min) + ":" + az(sec);
-                ap.innerHTML=apm;
-            }
-            else{
-                hours=x.getHours();
-                time.innerHTML=`${az(hours)}:${az(min)}:${az(sec)}`;
-                ap.innerHTML='';
-            }
-
-            //showdate
-            var d=String(x);
-            d=d.substr(0,15);
-            date.innerHTML=d;
-
-           setTimeout(showtime,999);
-        }
+        </section>
 
         
+    </section>
 
-        //function call
-       showtime();
-       getName();
-       setName();
-       
-    </script>
 </body>
 </html>
