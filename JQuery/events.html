@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Events</title>
+    <script src="./jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<style>
+    ::selection{    color: black;}
+</style>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Events</h1>
+        <hr>
+        <h2 class="text-center">Mouse Events</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <p class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rem in animi! Tenetur ipsum aliquam possimus rerum dolorem repudiandae odio.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore eveniet recusandae, facere, excepturi laboriosam expedita deleniti similique nam iure iste ab nisi dolorem vitae. Quibusdam ipsa praesentium doloribus nam.
+            </p>
+        </div>
+        <hr>
+
+        <h2 class="text-center">Keyboard Events</h2>
+        <p class="border border-dark text-justify p-3 mt-3 text-center">
+            Keypress (Textual Keys)<br>
+            KeyUp (All Keys)<br>
+            KeyDown (Only for function Keys)
+        </p>
+        <hr>
+
+        <h3 class="text-center">Form Events</h3>
+        <p class="border border-dark text-justify p-3 mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugiat possimus vero dolorem unde qui nisi enim perferendis, accusamus autem cumque fuga obcaecati beatae esse nulla quis illum, excepturi repellendus voluptates quidem itaque. Doloremque, autem labore doloribus dolorem perspiciatis dicta.
+        </p>
+
+        <input type="text" class="mb-3" id="inp">
+        <button id="btn">Copy to Clipboard</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            // Mouse Events
+            $('.box').click(function(){
+                $(this).css('background-color','aqua');
+            });
+
+            $('.box').dblclick(function(){
+                $(this).css('background-color','lightpink');
+            });
+
+            $('.box').contextmenu(function(){
+                $(this).css('background-color','skyblue');
+            });
+
+            // Keyboards Events
+            $('#inp').keypress(function(){
+                $(this).css('background-color','pink');
+            });
+
+            // Form Events
+
+            // CHANGE -- works on change of input.
+            $('#inp').change(function(){
+                $('.box').css('background-color','yellow');
+            });
+
+            $('#btn').click(function(){
+                $('#inp').select();
+                document.execCommand('copy');
+            });
+        });
+    </script>
+</body>
+</html>
