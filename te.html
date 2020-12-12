@@ -3,56 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temp</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
 </head>
-
-<style>
-    .ma{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: lightblue;
-    }
-    .info{
-        background-color: coral;
-    }
-    /* p{
-        cursor: default;
-    } */
-</style>
 <body>
-    <section id="main" class="ma" onclick="fun(z=this.childNodes)">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dolor?</p>
-        <span>10</span>
-    </section>
-    <!-- <button id="main" class="ma" >
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dolor?</p>
-        <span>10</span>
-    </button> -->
-
-    <!-- <button id="main" class="ma">
-        <p>?</p>
-        <span>10</span>
-    </button> -->
-
-    <section class="info" id="info">
-        <p></p>
-        <span></span>
-        <button id="btn_sub">-</button>
-        <input type="number" name="" id="" min="1">
-        <button id="btn_add">+</button>
-    </section>
-
+    <span id="sp">j</span>
     <script>
-        var a=document.getElementById('info');
-        var b=document.getElementById('info').childNodes;
-    
-        function fun(){
-            b[1].innerHTML=z[1].innerHTML;
-            b[3].innerHTML=z[3].innerHTML;
-        }
-       
+        var sp=document.getElementById('sp');
+        console.log(window.screen.availHeight);
+        console.log(window.screen.availWidth);
+        sp.innerHTML="Height="window.screen.availHeight + " Width=" + window.screen.availWidth;
     </script>
 </body>
 </html>

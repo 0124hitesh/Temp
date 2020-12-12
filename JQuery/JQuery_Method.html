@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Method</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="./jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center mb-5">JQuery Methods</h1>
+        <hr>
+        <div class="box border border-dark p-3">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi accusantium tempore quod officiis culpa labore minima doloremque beatae aut voluptates neque, magnam vel quibusdam, animi sit et quae ipsum tempora.
+            </p>
+        </div>
+        <br>
+        <form>
+            <div class="mb-3" id="frm">
+              <label for="exampleInputEmail1" class="form-label" id="email">Email address</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var a=$('.box').text();
+            var b=$('.box h2').text();
+            console.log(a);
+            
+            var c=$('.box').html();
+            console.log(c);
+
+            var d=$('.box').attr('class');
+            var e=$('.container form div label').attr('for');
+            console.log(d);
+            console.log(e);
+
+            $('#frm').submit(function(){
+                var f=$('#email').val();
+                alert(f);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Methods-2</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="./jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div class="container mt-3 p-3 text-center">
+        <h1>Insert | Remove</h1>
+        <hr>
+    </div>
+
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <script>
+       $(document).ready(function(){
+           $('ul').append('<li>Appended</li>');
+           $('ul').prepend('<li>Pre-Appended</li>');
+           $('ul').after('<p>A-Paragraph</p>');
+           $('ul').before('<p>B-Paragraph</p>');
+           $('p:last').remove();
+           $('ul').empty();
+       }); 
+    </script>
+</body>
+</html>

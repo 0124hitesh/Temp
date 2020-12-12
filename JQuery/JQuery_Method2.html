@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Methods-2</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="./jquery-3.5.1.js"></script>
+</head>
+<body>
+    <div class="container mt-3 p-3">
+        <h1>JQuery Class Methods</h1>
+        <div class="box border border-dark p-3 ">
+            <h2>Para Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod incidunt at eaque? Atque consequatur, corporis perspiciatis alias nemo dolorem veniam repellendus illo minima ullam.</p>
+        </div>
+        <br>
+        <button class="btn btn-primary mr-5" id="ac">AddClass</button>
+        <button class="btn btn-danger mr-5" id="rc">RemoveClass</button>
+        <button class="btn btn-success" id="tc">ToogleClass</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#ac').click(function(){
+                $('.box').addClass('bg-warning');
+            });
+
+            $('#rc').click(function(){
+                $('.box').removeClass('bg-warning');
+            });
+
+            $('#tc').click(function(){
+                $('.box').toggleClass('bg-info text-justify');
+            });
+        });
+    </script>
+</body>
+</html>
